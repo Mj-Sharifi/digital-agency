@@ -42,10 +42,6 @@ export default function HamburgerMenu({
           defaultCollapseIcon={<ExpandMore />}
           defaultExpandIcon={<ChevronRight />}
           sx={{
-            // height:"100%",
-            // display:"flex",
-            // flexDirection:"column",
-            // justifyContent:"space-between",
             "& li .MuiTreeItem-label": { order: "1", width: "auto" },
             "& li .MuiTreeItem-iconContainer": { order: "2" },
             "& li.MuiTreeItem-root": { marginBottom: "20px" },
