@@ -32,7 +32,7 @@ export default function HamburgerMenu({
       <Box sx={{ textAlign: "center", color: "white" }}>
         <img
           className="w-12 h-12 mx-auto my-3"
-          src={`${process.env.REACT_APP_API_Images}footer/footer logo.svg`}
+          src={"http://localhost:3000/assets/images/footer/footer logo.svg"}
           alt="Makarya"
           title="Makarya"
         />
@@ -49,7 +49,7 @@ export default function HamburgerMenu({
             "& li .MuiTreeItem-label": { order: "1", width: "auto" },
             "& li .MuiTreeItem-iconContainer": { order: "2" },
             "& li.MuiTreeItem-root": { marginBottom: "20px" },
-            "& .MuiCollapse-wrapperInner li":{marginBottom:"5px"}
+            "& .MuiCollapse-wrapperInner li": { marginBottom: "5px" },
           }}
         >
           <Box>

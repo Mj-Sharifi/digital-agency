@@ -95,7 +95,7 @@ export default function Navbar() {
         <Box>
           <img
             className="w-12 h-12"
-            src={`${process.env.REACT_APP_API_Images}footer/footer logo.svg`}
+            src={"http://localhost:3000/assets/images/footer/footer logo.svg"}
             alt="Makarya"
             title="Makarya"
           />

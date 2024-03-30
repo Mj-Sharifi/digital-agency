@@ -62,7 +62,7 @@ export default function Profile() {
         <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
           <Avatar
             alt={userInfo?.fullName}
-            src={`${process.env.REACT_APP_API_Images}testimony/${userInfo?.avatar}`}
+            src={`http://localhost:3000/assets/images/testimony/${userInfo?.avatar}`}
           />
         </IconButton>
       </BlackTooltip>
