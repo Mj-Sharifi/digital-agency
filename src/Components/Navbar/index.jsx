@@ -89,13 +89,17 @@ export default function Navbar() {
   return (
     <AppBar
       component="nav"
-      sx={{ backgroundColor: "black", color: "white", height: "80px" }}
+      sx={{
+        backgroundColor: "black !important",
+        color: "white",
+        height: "80px",
+      }}
     >
       <Toolbar sx={{ justifyContent: "space-between", height: "100%" }}>
         <Box>
           <img
             className="w-12 h-12"
-            src={"http://localhost:3000/assets/images/footer/footer logo.svg"}
+            src={`${process.env.REACT_APP_API_Images}footer/footer logo.svg`}
             alt="Makarya"
             title="Makarya"
           />
@@ -126,7 +130,12 @@ export default function Navbar() {
                   <Link to={handleLink(item, index)}>
                     <Typography
                       variant="s"
-                      sx={{ color: "white", fontSize: "14px" }}
+                      sx={{
+                        transition: "all 0.3s",
+                        color: "white",
+                        fontSize: "14px",
+                        "&:hover": { color: "primary.main" },
+                      }}
                     >
                       {item.toUpperCase()}
                     </Typography>
@@ -145,6 +154,8 @@ export default function Navbar() {
                       item === border ? "3px solid #FFB51F" : "none"
                     }`,
                     paddingBottom: `${item === border ? "10px" : "0px"}`,
+                    "& a":{color:"text.white"},
+                    "& a:hover span,& a:hover svg": {transition: "all 0.3s", color: "primary.main" },
                   }}
                 >
                   <Link
@@ -157,7 +168,13 @@ export default function Navbar() {
                   >
                     <Typography
                       variant="s"
-                      sx={{ color: "white", fontSize: "14px" }}
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        transition: "all 0.3s",
+                        color: "white",
+                        fontSize: "14px",
+                      }}
                     >
                       {item.toUpperCase()}
                     </Typography>
@@ -177,6 +194,8 @@ export default function Navbar() {
             }}
             sx={{
               "& .MuiPaper-root": { backgroundColor: "black", color: "white" },
+              "& a": { color: "white !important", transition: "all 0.3s" },
+              "& a:hover": { color: "primary.main" },
             }}
           >
             {pagesItems.map((e, i) => (

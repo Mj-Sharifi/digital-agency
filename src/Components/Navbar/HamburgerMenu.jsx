@@ -1,9 +1,8 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import { Box, Drawer, Divider } from "@mui/material";
 import { TreeItem, TreeView } from "@mui/x-tree-view";
 import { ExpandMore, ChevronRight } from "@mui/icons-material";
 import { Link } from "react-router-dom";
-import Auth from "../../Utils/Auth";
 const drawerWidth = "250px";
 
 export default function HamburgerMenu({
@@ -13,7 +12,6 @@ export default function HamburgerMenu({
   setMobileOpen,
   mobileOpen,
 }) {
-  const { token, handleToken } = useContext(Auth);
   return (
     <Drawer
       open={mobileOpen}
@@ -26,17 +24,20 @@ export default function HamburgerMenu({
         "& .MuiPaper-root": {
           width: drawerWidth,
           backgroundColor: "black",
+          paddingY:"10px"
         },
+        "& a":{color:"text.white"}
+      
       }}
     >
       <Box sx={{ textAlign: "center", color: "white" }}>
         <img
           className="w-12 h-12 mx-auto my-3"
-          src={"http://localhost:3000/assets/images/footer/footer logo.svg"}
+          src={`${process.env.REACT_APP_API_Images}footer/footer logo.svg`}
           alt="Makarya"
           title="Makarya"
         />
-        <Divider sx={{ backgroundColor: "#FFB51F" }} variant="middle" />
+        <Divider sx={{ backgroundColor: "#FFB51F",mb:"15px" }} variant="middle" />
         <TreeView
           aria-label="file system navigator"
           defaultCollapseIcon={<ExpandMore />}
@@ -45,10 +46,11 @@ export default function HamburgerMenu({
             "& li .MuiTreeItem-label": { order: "1", width: "auto" },
             "& li .MuiTreeItem-iconContainer": { order: "2" },
             "& li.MuiTreeItem-root": { marginBottom: "20px" },
-            "& .MuiCollapse-wrapperInner li": { marginBottom: "5px" },
+            "& .MuiCollapse-wrapperInner li":{marginBottom:"5px"},
+            
           }}
         >
-          <Box>
+          <Box >
             {navItems.map((e, i) => {
               if (i === 4) {
                 return (
@@ -59,6 +61,7 @@ export default function HamburgerMenu({
                     onClick={() => {
                       setMobileOpen(true);
                     }}
+                  
                   >
                     {pagesItems.map((item, index) => (
                       <Link
@@ -69,6 +72,7 @@ export default function HamburgerMenu({
                           nodeId={item + index.toString()}
                           label={item}
                           onClick={() => setMobileOpen(false)}
+                          
                         />
                       </Link>
                     ))}

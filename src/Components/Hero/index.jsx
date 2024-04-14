@@ -9,7 +9,7 @@ export default function Hero({img,title,subtitle}) {
           marginTop: "80px",
           width: "100%",
           height: { xs: "250px", md: "380px" },
-          backgroundImage: `url(http://localhost:3000/assets/images/${img})`,
+          backgroundImage: `url(${process.env.REACT_APP_API_Images}${img})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           position: "relative",
