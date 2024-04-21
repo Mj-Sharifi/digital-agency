@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Hero from "../../Components/Hero";
 import { useLocation } from "react-router-dom";
 import {
@@ -16,18 +16,18 @@ import TeamMember from "./TeamMember";
 import { Send } from "@mui/icons-material";
 
 export default function AboutUs() {
-  const [teamMembers,setTeamMembers] = useState()
-  useEffect(()=>{
+  const [teamMembers, setTeamMembers] = useState();
+  useEffect(() => {
     try {
-      (async()=>{
-        const res = await fetch("http://localhost:3000/teamMembers")
-        const data = await res.json()
-        setTeamMembers(data)
-      })()
+      (async () => {
+        const res = await fetch("http://localhost:3000/teamMembers");
+        const data = await res.json();
+        setTeamMembers(data);
+      })();
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  },[])
+  }, []);
   const pathName = useLocation();
   const page = pathName.pathname;
   return (
@@ -197,22 +197,15 @@ export default function AboutUs() {
               sx={{
                 transition: "all 0.3s",
                 height: "50px",
-                "&:hover:not(.Mui-disabled, .Mui-error):before": {
-                  border: "2px solid #00000080",
-                },
-                "&::before": {
-                  top: "0",
-                  border: "1px solid #00000080",
-                  borderRadius: "5px",
-                },
-                "&::after": { border: "none" },
-
+                "&::before": { border: "none !important" },
+                "&::after": { border: "none !important" },
                 "& input": {
                   padding: "0 10px",
                   width: "280px",
                   height: "100%",
                   outline: "none",
                   borderRadius: "5px",
+                  border:"1px solid black",
                   "&:focus": {
                     backgroundColor: "white",
                   },
@@ -226,12 +219,12 @@ export default function AboutUs() {
             variant="contained"
             startIcon={<Send />}
             sx={{
-              backgroundColor: "black",
+              backgroundColor: "text.main",
               marginTop: "40px",
               color: "white",
               width: "110px",
               height: "50px",
-              "&:hover": { backgroundColor: "black" },
+              "&:hover": { backgroundColor: "text.main" },
             }}
           >
             Send

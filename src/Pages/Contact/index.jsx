@@ -202,27 +202,24 @@ export default function Contact() {
           width="100%"
         >
           <Box>
-            <InputLabel htmlFor="subscription-email"></InputLabel>
+          <InputLabel htmlFor="subscription-email"></InputLabel>
             <Input
               id="subscription-email"
               sx={{
-                transition:"all 0.3s",
-                height:"50px",
-                "&:hover:not(.Mui-disabled, .Mui-error):before": {
-                  border: "2px solid #00000080",
-                },
-                "&::before": { top:"0",border: "1px solid #00000080",borderRadius:"5px" },
-                "&::after": { border: "none" },
-
+                transition: "all 0.3s",
+                height: "50px",
+                "&::before": { border: "none !important" },
+                "&::after": { border: "none !important" },
                 "& input": {
-                  padding:"0 10px",
-                  width:"280px",
-                  height:"100%",
+                  padding: "0 10px",
+                  width: "280px",
+                  height: "100%",
                   outline: "none",
                   borderRadius: "5px",
-                  "&:focus":{
-                    backgroundColor:"white"
-                  }
+                  border:"1px solid black",
+                  "&:focus": {
+                    backgroundColor: "white",
+                  },
                 },
               }}
             />
@@ -233,12 +230,12 @@ export default function Contact() {
             variant="contained"
             startIcon={<Send />}
             sx={{
-              backgroundColor:"black",
+              backgroundColor: "text.main",
               marginTop: "40px",
               color: "white",
               width: "110px",
               height: "50px",
-              "&:hover": { backgroundColor: "black" },
+              "&:hover": { backgroundColor: "text.main" },
             }}
           >
             Send
