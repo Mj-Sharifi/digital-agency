@@ -7,7 +7,7 @@ export default function TestimonyCard({testimony}) {
     <Paper sx={{width:{xs:"80%",sm:"100%"}}}>
       <Box sx={{height:"50px",backgroundColor:"black",display:"flex" ,justifyContent:"center",alignItems:'center'}}><Rating readOnly value={rating} color='primary'/></Box>
       <Box sx={{height:"350px",border:"1px solid #FFB51F60",paddingX:{xs:"5px",sm:"15px",md:"25px",lg:"40px"}}}>
-        <Box component={"img"} src={`http://localhost:3000/assets/images/testimony/${avatar}`} alt={name} title={name} sx={{borderRadius:"50%",width:"60px",marginX:"auto",marginTop:"10px"}}/>
+        <Box component={"img"} src={`/assets/images/testimony/${avatar}`} alt={name} title={name} sx={{borderRadius:"50%",width:"60px",marginX:"auto",marginTop:"10px"}}/>
         <Typography variant='m' textAlign={"center"}>{name}</Typography>
         <Typography variant='s' textAlign={"center"} color="primary" sx={{marginBottom:"10px",fontSize:"14px"}}>({workAt})</Typography>
         <Typography variant='s' textAlign={"center"}>{description}</Typography>

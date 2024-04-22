@@ -20,7 +20,7 @@ export default function AboutUs() {
   useEffect(() => {
     try {
       (async () => {
-        const res = await fetch("http://localhost:3000/teamMembers");
+        const res = await fetch(`${process.env.REACT_APP_API_URL}makarya-teamMembers`);
         const data = await res.json();
         setTeamMembers(data);
       })();

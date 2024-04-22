@@ -51,7 +51,7 @@ export default function Footer() {
           >
             <Box
               component={"img"}
-              src={`${process.env.REACT_APP_API_Images}footer/footer logo.svg`}
+              src={"assets/images/footer/footer logo.svg"}
               alt="Makarya"
               sx={{ width: "80px", height: "80px", paddingY: "8px" }}
             />
@@ -181,7 +181,7 @@ export default function Footer() {
                 <Grid key={index} item xs={4}>
                   <Box
                     component={"img"}
-                    src={`${process.env.REACT_APP_API_Images}footer/${icon}`}
+                    src={`assets/images/footer/${icon}`}
                     alt={icon}
                   />
                 </Grid>

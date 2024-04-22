@@ -16,7 +16,7 @@ export default function Testimony() {
   useEffect(() => {
     try {
       (async () => {
-        const res = await fetch("http://localhost:3000/testimony");
+        const res = await fetch(`${process.env.REACT_APP_API_URL}makarya-testimony`);
         const data = await res.json();
         setTestimony(data);
       })();

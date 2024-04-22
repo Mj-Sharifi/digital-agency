@@ -8,7 +8,7 @@ export default function FAQ() {
   useEffect(()=>{
     try {
       (async()=>{
-        const res = await fetch("http://localhost:3000/faq")
+        const res = await fetch(`${process.env.REACT_APP_API_URL}makarya-faq`)
         const data = await res.json()
         setAccordionContent(data)
       })()

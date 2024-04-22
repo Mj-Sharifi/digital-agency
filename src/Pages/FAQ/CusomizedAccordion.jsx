@@ -5,9 +5,9 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 
-const plusSquare = <img src="http://localhost:3000/assets/images/faq/plus-square.svg" alt={"open"} />;
+const plusSquare = <img src="assets/images/faq/plus-square.svg" alt={"open"} />;
 const minusSquare = (
-  <img src="http://localhost:3000/assets/images/faq/minus-square.svg" alt={"close"} />
+  <img src="assets/images/faq/minus-square.svg" alt={"close"} />
 );
 
 const Accordion = styled((props) => (
