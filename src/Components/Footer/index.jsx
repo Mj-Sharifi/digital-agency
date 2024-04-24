@@ -8,6 +8,13 @@ import {
 } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
+// import logo
+import linkedin from "./logo/linkedin.svg";
+import medium from "./logo/medium.svg";
+import twitter from "./logo/twitter.svg";
+import dribbble from "./logo/dribbble.svg";
+import facebook from "./logo/facebook.svg";
+import instagram from "./logo/instagram.svg";
 
 const secondFooterEl = ["HOME", "ABOUT US", "PORTFOLIO", "BLOG"];
 const thirdFooterEl = ["PAGES", "CONTACT"];
@@ -19,17 +26,14 @@ const pagesItems = [
   "FAQ",
   "404 PAGE",
 ];
-const socialMedia = [
-  "linkedin.svg",
-  "medium.svg",
-  "twitter.svg",
-  "dribbble.svg",
-  "facebook.svg",
-  "instagram.svg",
-];
+const socialMedia = [linkedin, medium, twitter, dribbble, facebook, instagram];
+
 export default function Footer() {
   return (
-    <Box sx={{ backgroundColor: "black", color: "white", marginTop: "25px" }}>
+    <Box
+      sx={{ backgroundColor: "black", color: "white", marginTop: "20px" }}
+      component={"footer"}
+    >
       <Container>
         <Grid
           container
@@ -181,7 +185,7 @@ export default function Footer() {
                 <Grid key={index} item xs={4}>
                   <Box
                     component={"img"}
-                    src={`assets/images/footer/${icon}`}
+                    src={icon}
                     alt={icon}
                   />
                 </Grid>
