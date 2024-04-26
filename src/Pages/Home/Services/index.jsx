@@ -27,7 +27,7 @@ export default function Services() {
     <Container>
       <Typography
         textAlign={"center"}
-        variant="l"
+        variant="h3"
         component={"h4"}
         gutterBottom
       >
@@ -52,7 +52,7 @@ export default function Services() {
           marginBottom: "25px",
         }}
       >
-        {services.map((service,index)=><ServiceCard key={index} service={service}/>)}
+        {services?.map((service,index)=><ServiceCard key={index} service={service}/>)}
       </Grid>
 
       <Button

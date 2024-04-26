@@ -29,7 +29,7 @@ export default function FAQ() {
         subtitle={"Nulla vitae elit libero, a pharetra augue mollis interdum."}
       />
       <Container sx={{ marginY: "50px" }}>
-        <Typography variant="m" component={"h3"} textAlign={"center"}>
+        <Typography variant="h4" component={"h3"} textAlign={"center"}>
           Get Inspired
         </Typography>
         <Divider
@@ -41,7 +41,7 @@ export default function FAQ() {
             marginBottom: "30px",
           }}
         />
-        <Typography variant="s" component={"p"} textAlign={"center"} sx={{marginBottom:"50px"}}>
+        <Typography variant="body2" component={"p"} textAlign={"center"} sx={{marginBottom:"50px"}}>
           Maecenas faucibus neque nec purus viverra molestie. Sed euismod
           eleifend faucibus. Maecenas viverra massa quis felis finibus posuere.
           Cras ut luctus quam. Vestibulum eget lectus id nulla tincidunt

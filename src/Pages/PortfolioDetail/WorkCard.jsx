@@ -27,9 +27,9 @@ export default function RelatedWorkCard({ work }) {
         />
         <Stack direction={"row"} justifyContent={"space-between"} alignItems={"center"} height={"20%"} paddingX={"15px"}>
           <Box>
-            <Typography variant="m" fontSize={"24px"}>{relatedWork?.title}</Typography>
+            <Typography variant="h4" fontSize={"24px"}>{relatedWork?.title}</Typography>
             <Typography
-              variant="s"
+              variant="body2"
               color={"text.grey"}
               sx={{ marginTop: "-5px" }}
             >

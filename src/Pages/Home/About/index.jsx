@@ -16,9 +16,9 @@ export default function About() {
     <Stack sx={{ height: "100vh" }}>
       <Box sx={{ height: "50%" }}>
         <Container sx={{paddingTop:"10vh"}}>
-          <Typography textAlign={"center"} variant="l" component={"h4"} gutterBottom>Who We Are</Typography>
+          <Typography textAlign={"center"} variant="h3" component={"h4"} gutterBottom>Who We Are</Typography>
           <Divider  sx={{width:"40px",height:"4px",borderRadius:"5px",backgroundColor:"#FFB51F",marginX:"auto",marginBottom:"40px"}}/>
-          <Typography textAlign={"center"} variant="s" component={"p"} sx={{paddingX:{md:"50px"}}}>
+          <Typography textAlign={"center"} variant="body2" component={"p"} sx={{paddingX:{md:"50px"}}}>
             Maecenas faucibus neque nec purus viverra molestie. Sed euismod
             eleifend faucibus. Maecenas viverra massa quis felis finibus
             posuere. Cras ut luctus quam. Vestibulum eget lectus id nulla

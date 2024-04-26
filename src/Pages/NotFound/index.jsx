@@ -34,7 +34,7 @@ export default function NotFound() {
           alignItems: "center",
         }}
       >
-        <Typography variant="l" component="h4">
+        <Typography variant="h3" component="h4">
           ERROR
         </Typography>
         <Typography
@@ -43,7 +43,7 @@ export default function NotFound() {
           sx={{ fontSize: "120px", fontWeight: "900", letterSpacing:{xs:"30px",md:"40px"} ,marginBottom:"5%" }}
         >
           404</Typography>
-        <Typography variant="l">SORRY :(</Typography>
+        <Typography variant="h3">SORRY :(</Typography>
         <Divider
           sx={{
             width: "30px",
@@ -52,7 +52,7 @@ export default function NotFound() {
             marginY: "10px",
           }}
         />
-        <Typography variant="s" sx={{color:"white"}} gutterBottom>
+        <Typography variant="body2" sx={{color:"white"}} gutterBottom>
           You're looking for the page that is not available.<br/> Why not comeback to
           our awesome homepage?
         </Typography>
@@ -69,7 +69,7 @@ export default function NotFound() {
           alignItems:"center",
           justifyContent:"center"
         }}
-      ><Typography variant="s" color={"white"}>2018 Makarya. All rights reserved.</Typography></Box>
+      ><Typography variant="body2" color={"white"}>2018 Makarya. All rights reserved.</Typography></Box>
     </Stack>
   );
 }

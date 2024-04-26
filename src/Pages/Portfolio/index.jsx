@@ -27,7 +27,6 @@ export default function Portfolio() {
       );
       const data = await res.json();
       setWorks(data);
-      console.log(data);
     })();
   }, [page]);
 
@@ -39,7 +38,7 @@ export default function Portfolio() {
         subtitle={"Nulla vitae elit libero, a pharetra augue mollis interdum."}
       />
       <Container>
-        <Typography variant="m" component={"h3"} textAlign={"center"}>
+        <Typography variant="h4" component={"h3"} textAlign={"center"}>
           Our Works
         </Typography>
         <Divider

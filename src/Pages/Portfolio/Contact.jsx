@@ -7,14 +7,14 @@ import {
   Button,
   Input,
 } from "@mui/material";
-
+import styles from "./style.module.css";
 export default function Contact() {
   return (
     <Box sx={{ backgroundColor: "#FFB51F", paddingY: "60px" }}>
       <Container sx={{}}>
         <Typography
           textAlign={"center"}
-          variant="l"
+          variant="h3"
           component={"h4"}
           gutterBottom
         >
@@ -103,28 +103,12 @@ export default function Contact() {
             }}
           >
             <Typography>Massage</Typography>
-            <Input
-              multiline
+            <textarea
+              name="message"
+              id="message"
               rows={10}
-              id="subscription-email"
-              sx={{
-                transition: "all 0.3s",
-                width: "100%",
-                "&::before": { border: "none !important" },
-                "&::after": { border: "none !important" },
-                "& textarea": {
-                  padding: "10px 15px",
-                  width: "100%",
-                  height: "100%",
-                  outline: "none",
-                  borderRadius: "5px",
-                  border: "1px solid black",
-                  "&:focus": {
-                    backgroundColor: "white",
-                  },
-                },
-              }}
-            />
+              className={styles.textarea}
+            ></textarea>
           </Box>
         </Box>
 
@@ -139,7 +123,6 @@ export default function Contact() {
             height: "53px",
             margin: "0 auto",
             fontSize: "20px",
-          
           }}
         >
           Send

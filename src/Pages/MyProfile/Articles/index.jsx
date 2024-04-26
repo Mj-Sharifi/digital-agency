@@ -1,10 +1,8 @@
 import {
   Box,
   Button,
-  Chip,
   Grid,
   Paper,
-  Stack,
   Typography,
 } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -40,7 +38,7 @@ export default function ArticleCard({ id }) {
         )}
 
         <Box sx={{ width: "65%", padding: "40px 5px",display:"flex",flexDirection:"column",justifyContent:"space-between",alignItems:"center" }}>
-          <Typography variant="m" component={"h2"}>
+          <Typography variant="h4" component={"h2"}>
             {article?.title}
           </Typography>
           {id < 3 || id===5 ? (

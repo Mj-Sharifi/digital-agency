@@ -41,7 +41,7 @@ export default function PortfolioDetail() {
       <Container sx={{ marginBottom: "50px" }}>
         <Stack direction={{ xs: "column", md: "row-reverse" }} gap={4}>
           <Box sx={{ width: { xs: "100%", md: "50%" } }}>
-            <Typography variant="m" component={"h3"}>
+            <Typography variant="h4" component={"h3"}>
               {work?.title}
             </Typography>
             <Divider
@@ -52,7 +52,7 @@ export default function PortfolioDetail() {
                 marginBottom: "30px",
               }}
             />
-            <Typography variant="s" sx={{ marginBottom: "30px" }}>
+            <Typography variant="body2" sx={{ marginBottom: "30px" }}>
               <span
                 style={{
                   fontSize: "32px",
@@ -64,16 +64,16 @@ export default function PortfolioDetail() {
               </span>
               {work?.description.slice(1)}
             </Typography>
-            <Typography variant="s">
+            <Typography variant="body2">
               <span style={{ fontWeight: "500" }}>Client: </span> {work?.client}
             </Typography>
-            <Typography variant="s">
+            <Typography variant="body2">
               <span style={{ fontWeight: "500" }}>Date: </span>
               {work?.date&&DateFormatter(work?.date)}
             </Typography>
             <Stack direction={"row"}>
               <Typography
-                variant="s"
+                variant="body2"
                 sx={{ fontWeight: "500", marginRight: "25px" }}
               >
                 Category:
@@ -99,7 +99,7 @@ export default function PortfolioDetail() {
             marginY: "30px",
           }}
         />
-        <Typography variant="m" component={"h3"} textAlign={"center"}>
+        <Typography variant="h4" component={"h3"} textAlign={"center"}>
           Related Works
         </Typography>
         <Divider

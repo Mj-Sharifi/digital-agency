@@ -28,8 +28,7 @@ export default function AboutUs() {
       console.log(error);
     }
   }, []);
-  const pathName = useLocation();
-  const page = pathName.pathname;
+
   return (
     <>
       <Hero
@@ -59,12 +58,12 @@ export default function AboutUs() {
               paddingLeft: "15px",
             }}
           >
-            <Typography variant="m" component="h4">
+            <Typography variant="h4" component="h4">
               Our <br /> History
             </Typography>
           </Box>
           <Box>
-            <Typography variant="s" component={"p"}>
+            <Typography variant="body2" component={"p"}>
               <span style={{ fontSize: "32px", fontWeight: "600" }}>M</span>
               aecenas faucibus neque nec purus viverra molestie. Sed euismod
               eleifend faucibus. Maecenas viverra massa quis felis finibus
@@ -93,7 +92,7 @@ export default function AboutUs() {
               paddingRight: "15px",
             }}
           >
-            <Typography variant="m" component="h4">
+            <Typography variant="h4" component="h4">
               Our <br /> Team
             </Typography>
           </Box>
@@ -119,10 +118,11 @@ export default function AboutUs() {
           justifyContent: "space-around",
           alignItems: "center",
           paddingY: { xs: "15px", md: "30px" },
+          paddingX:"10px"
         }}
       >
         <img src="assets/images/about-us/magic.svg" alt="magic" />
-        <Typography variant="m" sx={{ color: "white" }}>
+        <Typography variant="h4" sx={{ color: "white" }}>
           " Lorem ipsum doler sit amet "
         </Typography>
         <Divider
@@ -148,7 +148,7 @@ export default function AboutUs() {
             left: "5%",
           }}
         >
-          <Typography variant="m" component="h4">
+          <Typography variant="h4" component="h4">
             Our <br /> location
           </Typography>
         </Box>
@@ -170,7 +170,7 @@ export default function AboutUs() {
         bgcolor={"primary.main"}
       >
         <Box>
-          <Typography variant="l" gutterBottom>
+          <Typography variant="h4" gutterBottom>
             JOIN OUR NEWSLETTER
           </Typography>
           <Divider

@@ -5,27 +5,25 @@ import {
   Container,
   Divider,
   Stack,
-  InputLabel,
   Grid,
-  TextField,
   Typography,
   Button,
   Input,
 } from "@mui/material";
 import { Send } from "@mui/icons-material";
-
+import styles from "./style.module.css";
 export default function Contact() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const data = new FormData(e.currentTarget);
-    console.log({
-      firstName: data.get("firstname"),
-      lastName: data.get("lastname"),
-      email: data.get("email"),
-      subject: data.get("subject"),
-      message: data.get("message"),
-    });
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const data = new FormData(e.currentTarget);
+  //   console.log({
+  //     firstName: data.get("firstname"),
+  //     lastName: data.get("lastname"),
+  //     email: data.get("email"),
+  //     subject: data.get("subject"),
+  //     message: data.get("message"),
+  //   });
+  // };
   return (
     <>
       <Hero
@@ -34,7 +32,7 @@ export default function Contact() {
         subtitle={"Nulla vitae elit libero, a pharetra augue mollis interdum."}
       />
       <Container sx={{ paddingX: { md: "100px", lg: "200px", xl: "300px" } }}>
-        <Typography variant="l" gutterBottom textAlign={"center"}>
+        <Typography variant="h3" gutterBottom textAlign={"center"}>
           Contact
         </Typography>
         <Divider
@@ -46,87 +44,127 @@ export default function Contact() {
           }}
         />
         <Box
-          component={"form"}
-          noValidate
           sx={{
             paddingY: "60px",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
           }}
-          onSubmit={handleSubmit}
         >
           <Grid container spacing={4}>
             <Grid item xs={12} sm={6}>
-              <InputLabel
-                htmlFor="firstname"
-                sx={{ fontWeight: "500", color: "black" }}
-              >
-                First Name
-              </InputLabel>
-              <TextField
+              <Typography variant="body2">First Name</Typography>
+              <Input
                 name="firstname"
                 id="firstname"
-                sx={{ width: "100%" }}
-              ></TextField>
+                sx={{
+                  width: "100%",
+                  height: "50px",
+                  "&::before": { border: "none !important" },
+                  "&::after": { border: "none !important" },
+                  "& input": {
+                    padding: "0 10px",
+                    width: "100%",
+                    height: "100%",
+                    outline: "none",
+                    borderRadius: "5px",
+                    border: "1px solid #00000050",
+                    "&:focus": {
+                      backgroundColor: "white",
+                      borderColor: "primary.main",
+                      borderWidth: "2px",
+                    },
+                  },
+                }}
+              ></Input>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <InputLabel
-                htmlFor="lastname"
-                sx={{ fontWeight: "500", color: "black" }}
-              >
-                Last Name
-              </InputLabel>
-              <TextField
+              <Typography variant="body2">Last Name</Typography>
+              <Input
                 name="lastname"
                 id="lastname"
-                sx={{ width: "100%" }}
-              ></TextField>
+                sx={{
+                  width: "100%",
+                  height: "50px",
+                  "&::before": { border: "none !important" },
+                  "&::after": { border: "none !important" },
+                  "& input": {
+                    padding: "0 10px",
+                    width: "100%",
+                    height: "100%",
+                    outline: "none",
+                    borderRadius: "5px",
+                    border: "1px solid #00000050",
+                    "&:focus": {
+                      backgroundColor: "white",
+                      borderColor: "primary.main",
+                      borderWidth: "2px",
+                    },
+                  },
+                }}
+              ></Input>
             </Grid>
             <Grid item xs={12}>
-              <InputLabel
-                htmlFor="lastname"
-                sx={{ fontWeight: "500", color: "black" }}
-              >
-                Email Address
-              </InputLabel>
-              <TextField
+              <Typography variant="body2">Email Address</Typography>
+              <Input
                 type="email"
                 name="email"
                 id="email"
-                inputProps={{ id: "lastname" }}
-                sx={{ width: "100%" }}
-              ></TextField>
+                sx={{
+                  width: "100%",
+                  height: "50px",
+                  "&::before": { border: "none !important" },
+                  "&::after": { border: "none !important" },
+                  "& input": {
+                    padding: "0 10px",
+                    width: "100%",
+                    height: "100%",
+                    outline: "none",
+                    borderRadius: "5px",
+                    border: "1px solid #00000050",
+                    "&:focus": {
+                      backgroundColor: "white",
+                      borderColor: "primary.main",
+                      borderWidth: "2px",
+                    },
+                  },
+                }}
+              ></Input>
             </Grid>
             <Grid item xs={12}>
-              <InputLabel
-                htmlFor="lastname"
-                sx={{ fontWeight: "500", color: "black" }}
-              >
-                Subject
-              </InputLabel>
-              <TextField
+              <Typography variant="body2">Subject</Typography>
+              <Input
                 name="subject"
                 id="subject"
-                inputProps={{ id: "lastname" }}
-                sx={{ width: "100%" }}
-              ></TextField>
+                sx={{
+                  width: "100%",
+                  height: "50px",
+                  "&::before": { border: "none !important" },
+                  "&::after": { border: "none !important" },
+                  "& input": {
+                    padding: "0 10px",
+                    width: "100%",
+                    height: "100%",
+                    outline: "none",
+                    borderRadius: "5px",
+                    border: "1px solid #00000050",
+                    "&:focus": {
+                      backgroundColor: "white",
+                      borderColor: "primary.main",
+                      borderWidth: "2px",
+                    },
+                  },
+                }}
+              ></Input>
             </Grid>
             <Grid item xs={12}>
-              <InputLabel
-                htmlFor="lastname"
-                sx={{ fontWeight: "500", color: "black" }}
-              >
-                Message
-              </InputLabel>
-              <TextField
+              <Typography variant="body2">Message</Typography>
+              <textarea
                 name="message"
                 id="message"
-                multiline
-                rows={8}
-                inputProps={{ id: "lastname" }}
-                sx={{ width: "100%" }}
-              ></TextField>
+                rows={10}
+                className={styles.textarea}
+              ></textarea>
             </Grid>
           </Grid>
           <Button
@@ -159,16 +197,16 @@ export default function Contact() {
             left: "5%",
           }}
         >
-          <Typography variant="m" component="h4">
+          <Typography variant="h4" component="h4">
             Our <br /> location
           </Typography>
         </Box>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d25714.177790868052!2d59.5767962!3d36.3299517!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1707208614906!5m2!1sen!2s"
           style={{ border: "0", width: "100%", height: "100%" }}
-          allowfullscreen=""
+          allowFullScreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerPolicy="no-referrer-when-downgrade"
           title="Our Location"
         ></iframe>
       </Box>
@@ -181,7 +219,7 @@ export default function Contact() {
         bgcolor={"primary.main"}
       >
         <Box>
-          <Typography variant="l" gutterBottom>
+          <Typography variant="h4" gutterBottom>
             JOIN OUR NEWSLETTER
           </Typography>
           <Divider
@@ -202,7 +240,6 @@ export default function Contact() {
           width="100%"
         >
           <Box>
-          <InputLabel htmlFor="subscription-email"></InputLabel>
             <Input
               id="subscription-email"
               sx={{
@@ -216,7 +253,7 @@ export default function Contact() {
                   height: "100%",
                   outline: "none",
                   borderRadius: "5px",
-                  border:"1px solid black",
+                  border: "1px solid black",
                   "&:focus": {
                     backgroundColor: "white",
                   },

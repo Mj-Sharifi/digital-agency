@@ -44,7 +44,7 @@ export default function TeamMember({ img, name, skill }) {
           sx={{ height: "270px", objectPosition: "top", transition: "0.3s" }}
         />
         <CardContent ref={cardTitle} sx={{ height: "80px" }}>
-          <Typography variant="m" component={"h2"} textAlign={"center"}>
+          <Typography variant="h4" component={"h2"} textAlign={"center"}>
             {name}
           </Typography>
         </CardContent>
@@ -65,10 +65,10 @@ export default function TeamMember({ img, name, skill }) {
             alignItems:"center"
           }}
         >
-          <Typography variant="m" component={"h2"} textAlign={"center"}>
+          <Typography variant="h4" component={"h2"} textAlign={"center"}>
             {name}
           </Typography>
-          <Typography variant="s" sx={{ opacity: "0.85" }} textAlign={"center"}>
+          <Typography variant="body2" sx={{ opacity: "0.85" }} textAlign={"center"}>
             {skill}
           </Typography>
           <Divider
@@ -82,7 +82,7 @@ export default function TeamMember({ img, name, skill }) {
             }}
           />
           <Typography
-            variant="s"
+            variant="body2"
             sx={{ opacity: "0.85" }}
             textAlign={"center"}
             gutterBottom

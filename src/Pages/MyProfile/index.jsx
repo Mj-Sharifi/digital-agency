@@ -46,10 +46,10 @@ export default function MyProfile() {
               src={`assets/images/testimony/${userInfo?.avatar}`}
               sx={{ borderRadius: "100%", width: "80px", height: "80px" }}
             />
-            <Typography variant="m" component={"h2"}>
+            <Typography variant="h4" component={"h2"}>
               {userInfo?.fullName}
             </Typography>
-            <Typography variant="s" color="text.grey">
+            <Typography variant="body2" color="text.grey">
               {userInfo?.city}, {userInfo?.country}
             </Typography>
             <Typography>{userInfo?.about}</Typography>
@@ -60,7 +60,7 @@ export default function MyProfile() {
                 </ListItemIcon>
                 <ListItemText
                   primary={`${(userInfo?.articles)?.length} Articles`}
-                  primaryTypographyProps={{variant:"s"}}
+                  primaryTypographyProps={{variant:"body2"}}
                 />
               </ListItem>
               <ListItem>
@@ -69,7 +69,7 @@ export default function MyProfile() {
                 </ListItemIcon>
                 <ListItemText
                   primary={`${userInfo?.numberOfViews} Views`}
-                  primaryTypographyProps={{variant:"s"}}
+                  primaryTypographyProps={{variant:"body2"}}
                 />
               </ListItem>
               <ListItem>
@@ -78,7 +78,7 @@ export default function MyProfile() {
                 </ListItemIcon>
                 <ListItemText
                   primary={`${userInfo?.numberOfLikes} Likes`}
-                  primaryTypographyProps={{variant:"s"}}
+                  primaryTypographyProps={{variant:"body2"}}
                 />
               </ListItem>
               <ListItem>
@@ -87,7 +87,7 @@ export default function MyProfile() {
                 </ListItemIcon>
                 <ListItemText
                   primary={`${userInfo?.numberOfComments} Comments`}
-                  primaryTypographyProps={{variant:"s"}}
+                  primaryTypographyProps={{variant:"body2"}}
                 />
               </ListItem>
             </List>

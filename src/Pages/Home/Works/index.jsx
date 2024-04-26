@@ -1,21 +1,22 @@
 import { Divider, Typography, Grid, Container, Button } from "@mui/material";
-import React from "react";
+import React,{useState,useEffect} from "react";
 import WorkCard from "./WorkCard";
 import { Link } from "react-router-dom";
-const works = [
-  { image: "Home-works-1.jpg", title: "Photography", subtitle: "Strawthings Co." },
-  { image: "Home-works-2.jpg", title: "Branding", subtitle: "Teen-Shirt" },
-  { image: "Home-works-3.jpg", title: "Branding", subtitle: "Streetyoung" },
-  { image: "Home-works-4.jpg", title: "Photography", subtitle: "Freshfruit" },
-  { image: "Home-works-5.jpg", title: "Print Design", subtitle: "INKGril Co." },
-  { image: "Home-works-6.jpg", title: "Print Design", subtitle: "Lifehealth Inc." },
-];
+
 export default function Works() {
+  const [works, setWorks] = useState();
+  useEffect(() => {
+    (async () => {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}makarya-portfolio?_start=0&_end=6`);
+      const data = await res.json();
+      setWorks(data);
+    })();
+  }, []);
   return (
     <Container sx={{ paddingTop: "10vh" }}>
       <Typography
         textAlign={"center"}
-        variant="l"
+        variant="h3"
         component={"h4"}
         gutterBottom
       >
@@ -32,7 +33,7 @@ export default function Works() {
         }}
       />
       <Grid container spacing={3} sx={{display:"flex",justifyContent:{xs:"center",sm:"start"},marginBottom:"25px"}}>
-        {works.map((work,index)=><WorkCard key={index} work={work} index={index}/>)}
+        {works?.map((work,index)=><WorkCard key={index} work={work} index={index}/>)}
       </Grid>
 
       <Link to="/portfolio-list"><Button variant="contained" color="primary" disableElevation sx={{display:"flex !important",color:"white",width:"161px",height:"53px",margin:"0 auto"}}>View All</Button></Link>

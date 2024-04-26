@@ -1,12 +1,12 @@
-import { styled } from "@mui/material/styles";
+
 import {
   Box,
-  Button,
+
   ToggleButton,
   ToggleButtonGroup,
   Typography,
 } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
 
 // an array for background image addresses
@@ -71,18 +71,19 @@ export default function Banner() {
         alignItems: "center",
         justifyContent: "center",
         position: "relative",
-        paddingX:"10%"
+        paddingX:"10%",
+        paddingTop:{xs:"20px",sm:"0"}
       }}
     >
       <Typography
         textAlign={"center"}
-        variant="xl"
+        variant="h2"
         component="h4"
         gutterBottom
       >
         Make it Happen
       </Typography>
-      <Typography textAlign={"center"} variant="s" component="p">
+      <Typography textAlign={"center"} variant="body2" component="p">
         Got a lot of idea to be realized? Tell it to the right one to make it
         happen! And fortunately, that right one is just in front of you.
       </Typography>
