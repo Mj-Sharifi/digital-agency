@@ -30,13 +30,13 @@ export default function Hero({img,title,subtitle}) {
         >
           <Typography
             textAlign={"center"}
-            variant="l"
+            variant="h3"
             color={"text.white"}
             gutterBottom
           >
             {title}
           </Typography>
-          <Typography textAlign={"center"} variant="s" color={"text.white"} sx={{paddingX:"10px"}}>
+          <Typography textAlign={"center"} variant="body2" color={"text.white"} sx={{paddingX:"10px"}}>
             {subtitle}
           </Typography>
         </Box>

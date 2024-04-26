@@ -62,8 +62,8 @@ export default function Navbar() {
       setBorder(capitalize(p.split("-").join(" ").slice(1)));
     } else if (p.includes("portfolio")) {
       setBorder("Portfolio");
-    } else if (p.includes("article")) {
-      setBorder("Article");
+    } else if (p.includes("blog")) {
+      setBorder("Blog");
     } else {
       setBorder("Pages");
     }
@@ -129,10 +129,10 @@ export default function Navbar() {
                 >
                   <Link to={handleLink(item, index)}>
                     <Typography
-                      variant="s"
+                      variant="body2"
                       sx={{
+                        color:"white !important",
                         transition: "all 0.3s",
-                        color: "white",
                         fontSize: "14px",
                         "&:hover": { color: "primary.main" },
                       }}
@@ -167,12 +167,12 @@ export default function Navbar() {
                     onClick={(e) => handleClick(e, item)}
                   >
                     <Typography
-                      variant="s"
+                      variant="body2"
                       sx={{
                         display: "flex",
                         alignItems: "center",
                         transition: "all 0.3s",
-                        color: "white",
+                        color: "white !important",
                         fontSize: "14px",
                       }}
                     >

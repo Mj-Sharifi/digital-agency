@@ -9,6 +9,7 @@ import {
 import React from "react";
 import { Link } from "react-router-dom";
 // import logo
+import brandLogo from "./logo/footer logo.svg"
 import linkedin from "./logo/linkedin.svg";
 import medium from "./logo/medium.svg";
 import twitter from "./logo/twitter.svg";
@@ -55,15 +56,15 @@ export default function Footer() {
           >
             <Box
               component={"img"}
-              src={"assets/images/footer/footer logo.svg"}
+              src={brandLogo}
               alt="Makarya"
               sx={{ width: "80px", height: "80px", paddingY: "8px" }}
             />
             <Typography
-              variant="s"
+              variant="body2"
               component={"p"}
               sx={{
-                color: "white",
+                color: "white !important",
                 paddingRight: { xs: "0px", md: "28%" },
                 textAlign: { xs: "center", md: "start" },
               }}
@@ -72,7 +73,7 @@ export default function Footer() {
               content. Lorem ipsum and something else.
             </Typography>
             <Typography
-              variant="xs"
+              variant="body1"
               sx={{
                 marginTop: "50px",
                 color: "white",
@@ -169,7 +170,7 @@ export default function Footer() {
           </Grid>
           <Grid item xs={6} sm={4} md={3} sx={{ paddingX: "5%" }}>
             <Typography
-              variant="m"
+              variant="h4"
               sx={{
                 fontSize: "20px",
                 fontWeight: "600",

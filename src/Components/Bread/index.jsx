@@ -1,4 +1,4 @@
-import { Box, Breadcrumbs, Typography} from "@mui/material";
+import { Box, Breadcrumbs, Typography } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 
 const capitalize = (str) => {
@@ -11,7 +11,9 @@ const capitalize = (str) => {
 };
 const handleLinks = (p) => {
   const segments = p.split("/");
-  ((segments.includes("blog") || segments.includes("portfolio")) && segments.length>2)&&segments.splice(2,1)
+  (segments.includes("blog") || segments.includes("portfolio")) &&
+    segments.length > 2 &&
+    segments.splice(2, 1);
   const pathArray = segments.reduce((acc, segment, index) => {
     if (segment !== "") {
       const path = "/" + segments.slice(1, index + 1).join("/");
@@ -30,16 +32,15 @@ const handleBreadcumbs = (page, pathNames) => {
     );
   } else {
     breadCrumb = page.map((p, i) =>
-      i === page.length - 1 ? (
-        <Link key={i} className="text-[#FFB51F]" to={pathNames[i]}>
+      i !== page.length - 1 ? (
+        <Link key={i} to={pathNames[i]} >
           {capitalize(p)}
         </Link>
       ) : (
-        <Link key={i} to={pathNames[i]}>
-          {capitalize(p)}
-        </Link>
+        <Typography sx={{color:"primary.main"}}>{capitalize(p)}</Typography>
       )
     );
+
   }
   return breadCrumb;
 };
@@ -47,8 +48,10 @@ const handleBreadcumbs = (page, pathNames) => {
 export default function Bread() {
   const pathName = useLocation();
   const page = pathName?.pathname.split("/").slice(1);
-  ((page.includes("blog") || page.includes("portfolio")) && page.length>2)&&page.splice(1,1)
-  let pathNames = handleLinks(pathName?.pathname)
+  (page.includes("blog") || page.includes("portfolio")) &&
+    page.length > 2 &&
+    page.splice(1, 1);
+  let pathNames = handleLinks(pathName?.pathname);
 
   return (
     <Box
@@ -61,7 +64,7 @@ export default function Bread() {
         backgroundColor: "#00000080",
       }}
     >
-      <Breadcrumbs aria-label="breadcrumb" sx={{ color: "white !important" }}>
+      <Breadcrumbs aria-label="breadcrumb" sx={{ color: "white !important","& a:hover":{transition:"all 0.3s",color:"primary.main"} }}>
         <Link to="/">Home</Link>
         {handleBreadcumbs(page, pathNames)}
       </Breadcrumbs>

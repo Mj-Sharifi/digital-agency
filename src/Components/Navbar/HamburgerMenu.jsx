@@ -30,7 +30,7 @@ export default function HamburgerMenu({
       
       }}
     >
-      <Box sx={{ textAlign: "center", color: "white" }}>
+      <Box sx={{ textAlign: "center", color: "white !important" }}>
         <img
           className="w-12 h-12 mx-auto my-3"
           src={`${process.env.REACT_APP_API_Images}footer/footer logo.svg`}
@@ -43,7 +43,7 @@ export default function HamburgerMenu({
           defaultCollapseIcon={<ExpandMore />}
           defaultExpandIcon={<ChevronRight />}
           sx={{
-            "& li .MuiTreeItem-label": { order: "1", width: "auto" },
+            "& li .MuiTreeItem-label": { order: "1", width: "auto",color:"text.white" },
             "& li .MuiTreeItem-iconContainer": { order: "2" },
             "& li.MuiTreeItem-root": { marginBottom: "20px" },
             "& .MuiCollapse-wrapperInner li":{marginBottom:"5px"},
