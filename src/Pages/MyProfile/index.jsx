@@ -35,7 +35,7 @@ export default function MyProfile() {
       <Hero
         title={userInfo?.fullName}
         subtitle={""}
-        img={"my-profile/my-profile-hero.jpg"}
+        img={"assets/images/my-profile/my-profile-hero.jpg"}
       />
 
       <Container sx={{marginBottom:"80px"}}>

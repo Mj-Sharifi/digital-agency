@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Hero from "../../Components/Hero";
-import { useLocation } from "react-router-dom";
 import {
   Box,
   Grid,
@@ -32,7 +31,7 @@ export default function AboutUs() {
   return (
     <>
       <Hero
-        img={"about-us/about-us-hero.jpg"}
+        img={"assets/images/about-us/about-us-hero.jpg"}
         title={"About Us"}
         subtitle={"Nulla vitae elit libero, a pharetra augue mollis interdum."}
       />
@@ -206,6 +205,7 @@ export default function AboutUs() {
                   outline: "none",
                   borderRadius: "5px",
                   border:"1px solid black",
+                  transition:"all 0.3s",
                   "&:focus": {
                     backgroundColor: "white",
                   },

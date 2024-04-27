@@ -13,21 +13,21 @@ import {
 import { Send } from "@mui/icons-material";
 import styles from "./style.module.css";
 export default function Contact() {
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const data = new FormData(e.currentTarget);
-  //   console.log({
-  //     firstName: data.get("firstname"),
-  //     lastName: data.get("lastname"),
-  //     email: data.get("email"),
-  //     subject: data.get("subject"),
-  //     message: data.get("message"),
-  //   });
-  // };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    console.log({
+      firstName: data.get("firstname"),
+      lastName: data.get("lastname"),
+      email: data.get("email"),
+      subject: data.get("subject"),
+      message: data.get("message"),
+    });
+  };
   return (
     <>
       <Hero
-        img={"contact/contact-hero.jpg"}
+        img={"assets/images/contact/contact-hero.jpg"}
         title={"Contact"}
         subtitle={"Nulla vitae elit libero, a pharetra augue mollis interdum."}
       />
@@ -44,12 +44,15 @@ export default function Contact() {
           }}
         />
         <Box
+        component={"form"}
+        noValidate
           sx={{
             paddingY: "60px",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
           }}
+          onSubmit={handleSubmit}
         >
           <Grid container spacing={4}>
             <Grid item xs={12} sm={6}>

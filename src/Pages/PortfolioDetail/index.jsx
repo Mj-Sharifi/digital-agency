@@ -34,7 +34,7 @@ export default function PortfolioDetail() {
   return (
     <>
       <Hero
-        img={"portfolio-detail/portfolio-detail-hero.jpg"}
+        img={"../../assets/images/portfolio-detail/portfolio-detail-hero.jpg"}
         title={"Portfolio Detail"}
         subtitle={"Nulla vitae elit libero, a pharetra augue mollis interdum."}
       />
@@ -64,17 +64,17 @@ export default function PortfolioDetail() {
               </span>
               {work?.description.slice(1)}
             </Typography>
-            <Typography variant="body2">
-              <span style={{ fontWeight: "500" }}>Client: </span> {work?.client}
+            <Typography variant="body2" sx={{"& span":{fontWeight:"600 !important"}}}>
+              <span>Client: </span> {work?.client}
             </Typography>
-            <Typography variant="body2">
-              <span style={{ fontWeight: "500" }}>Date: </span>
+            <Typography variant="body2" sx={{"& span":{fontWeight:"600 !important"}}}>
+              <span >Date: </span>
               {work?.date&&DateFormatter(work?.date)}
             </Typography>
             <Stack direction={"row"}>
               <Typography
                 variant="body2"
-                sx={{ fontWeight: "500", marginRight: "25px" }}
+                sx={{ fontWeight: "600 !important", marginRight: "25px" }}
               >
                 Category:
               </Typography>

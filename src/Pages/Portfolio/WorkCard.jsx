@@ -18,7 +18,7 @@ export default function WorkCard({ work }) {
           component="img"
           src={`assets/images/portfolio/${image}`}
           alt={title}
-          sx={{height:"75%"}}
+          sx={{height:"75%",objectFit:"cover"}}
         />
         <CardContent
           sx={{
@@ -32,9 +32,9 @@ export default function WorkCard({ work }) {
         >
           <ListItemText
             primary={title}
-            primaryTypographyProps={{ variant: "m" }}
+            primaryTypographyProps={{ variant: "h4" }}
             secondary={client}
-            secondaryTypographyProps={{ variant: "s" }}
+            secondaryTypographyProps={{ variant: "body2" }}
           />
           {id < 4 ? (
             <Link to={`/portfolio/${id}/${title.toLowerCase().split(" ").join("-")}`}>
@@ -47,6 +47,7 @@ export default function WorkCard({ work }) {
                   width: "72px",
                   height: "40px",
                   textTransform: "inherit",
+                  fontSize:"18px"
                 }}
               >
                 View
@@ -62,6 +63,7 @@ export default function WorkCard({ work }) {
                 width: "72px",
                 height: "40px",
                 textTransform: "inherit",
+                fontSize:"18px"
               }}
             >
               View

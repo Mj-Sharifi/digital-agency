@@ -52,10 +52,10 @@ export default function CustomizedAccordions({ content,handleChange,expanded }) 
         id={`${title}-header`}
         expandIcon={expanded ? minusSquare : plusSquare}
       >
-        <Typography>{title}</Typography>
+        <Typography variant="h6">{title}</Typography>
       </AccordionSummary>
       <AccordionDetails>
-        <Typography>{summary}</Typography>
+        <Typography variant="body2">{summary}</Typography>
       </AccordionDetails>
     </Accordion>
   );

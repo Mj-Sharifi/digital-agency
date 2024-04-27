@@ -24,7 +24,7 @@ export default function FAQ() {
   return (
     <>
       <Hero
-        img={"faq/faq-hero.jpg"}
+        img={"assets/images/faq/faq-hero.jpg"}
         title={"FAQ"}
         subtitle={"Nulla vitae elit libero, a pharetra augue mollis interdum."}
       />

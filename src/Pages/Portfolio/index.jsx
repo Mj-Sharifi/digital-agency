@@ -33,7 +33,7 @@ export default function Portfolio() {
   return (
     <>
       <Hero
-        img={"portfolio/portfolio-hero.jpg"}
+        img={"assets/images/portfolio/portfolio-hero.jpg"}
         title={"Portfolio"}
         subtitle={"Nulla vitae elit libero, a pharetra augue mollis interdum."}
       />

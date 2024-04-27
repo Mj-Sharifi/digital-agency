@@ -62,9 +62,10 @@ export default function Services() {
         sx={{
           display: "flex !important",
           color: "white",
-          width: "161px",
-          height: "53px",
+          width: "150px",
+          height: "50px",
           margin: "0 auto",
+          fontSize:"16px"
         }}
       >
         Pricing Plan

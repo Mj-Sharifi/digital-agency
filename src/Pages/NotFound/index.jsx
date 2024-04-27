@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function NotFound() {
   return (
-    <Stack
-      sx={{ backgroundColor: "black", height: "100vh" }}
-    >
+    <Stack sx={{ backgroundColor: "black", height: "100vh" }}>
       <Box
         sx={{
           height: "8%",
@@ -17,7 +15,7 @@ export default function NotFound() {
         }}
       >
         <img
-          style={{height:"85%"}}
+          style={{ height: "85%" }}
           src="assets/images/footer/footer logo.svg"
           alt="Makarya"
           title="Makarya"
@@ -32,18 +30,29 @@ export default function NotFound() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
+          gap: "5px",
         }}
       >
         <Typography variant="h3" component="h4">
           ERROR
         </Typography>
         <Typography
-          component="h4"
-          color="primary"
-          sx={{ fontSize: "120px", fontWeight: "900", letterSpacing:{xs:"30px",md:"40px"} ,marginBottom:"5%" }}
+          component="span"
+          color={"primary"}
+          sx={{
+            fontSize: {
+              xs: "80px",
+              sm: "100px",
+              md: "120px",
+            },
+            lineHeight: { xs: "100px", sm: "130px", md: "160px" },
+            fontWeight:"900",
+            letterSpacing: { xs: "30px", md: "40px" },
+          }}
         >
-          404</Typography>
-        <Typography variant="h3">SORRY :(</Typography>
+          404
+        </Typography>
+        <Typography variant="h3">SORRY {":("}</Typography>
         <Divider
           sx={{
             width: "30px",
@@ -52,11 +61,20 @@ export default function NotFound() {
             marginY: "10px",
           }}
         />
-        <Typography variant="body2" sx={{color:"white"}} gutterBottom>
-          You're looking for the page that is not available.<br/> Why not comeback to
-          our awesome homepage?
+        <Typography variant="body2" sx={{ color: "white" }} gutterBottom>
+          You're looking for the page that is not available.
+          <br /> Why not comeback to our awesome homepage?
         </Typography>
-        <Link to="/"><Button variant="contained" size="large" startIcon={<Home fontSize="large"/>} sx={{color:"white",fontWeight:"600"}}>Home</Button></Link>
+        <Link to="/">
+          <Button
+            variant="contained"
+            size="large"
+            startIcon={<Home fontSize="large" />}
+            sx={{ color: "white", fontWeight: "600" }}
+          >
+            Home
+          </Button>
+        </Link>
       </Box>
       <Box
         sx={{
@@ -65,11 +83,15 @@ export default function NotFound() {
           backgroundColor: "#FFB51F",
           position: "fixed",
           bottom: "0",
-          display:"flex",
-          alignItems:"center",
-          justifyContent:"center"
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
-      ><Typography variant="body2" color={"white"}>2018 Makarya. All rights reserved.</Typography></Box>
+      >
+        <Typography variant="body2" color={"white"}>
+          2018 Makarya. All rights reserved.
+        </Typography>
+      </Box>
     </Stack>
   );
 }

@@ -44,7 +44,7 @@ export default function Contact() {
               marginBottom: "25px",
             }}
           >
-            <Typography>Email address</Typography>
+            <Typography variant="h6">Email address</Typography>
             <Input
               id="subscription-email"
               sx={{
@@ -60,6 +60,7 @@ export default function Contact() {
                   outline: "none",
                   borderRadius: "5px",
                   border: "1px solid black",
+                  transition:"all 0.3s",
                   "&:focus": {
                     backgroundColor: "white",
                   },
@@ -73,7 +74,7 @@ export default function Contact() {
               marginBottom: "25px",
             }}
           >
-            <Typography>Subject</Typography>
+            <Typography variant="h6">Subject</Typography>
             <Input
               id="subscription-email"
               sx={{
@@ -89,6 +90,7 @@ export default function Contact() {
                   outline: "none",
                   borderRadius: "5px",
                   border: "1px solid black",
+                  transition:"all 0.3s",
                   "&:focus": {
                     backgroundColor: "white",
                   },
@@ -102,7 +104,7 @@ export default function Contact() {
               marginBottom: "20px",
             }}
           >
-            <Typography>Massage</Typography>
+            <Typography variant="h6">Massage</Typography>
             <textarea
                 name="message"
                 id="message"

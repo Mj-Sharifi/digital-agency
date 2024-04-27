@@ -18,16 +18,16 @@ export default function RelatedWorkCard({ work }) {
 
   return (
     <Grid item xs={10} sm={6} md={4}>
-      <Paper sx={{ height: "350px", borderRadius: "4%", overflow: "hidden" }}>
+      <Paper sx={{ height: "360px", borderRadius: "4%", overflow: "hidden" }}>
         <Box
           component={"img"}
           src={`../../assets/images/portfolio/${relatedWork?.image}`}
           alt={relatedWork?.title}
           sx={{ height: "80%",width:"100%" }}
         />
-        <Stack direction={"row"} justifyContent={"space-between"} alignItems={"center"} height={"20%"} paddingX={"15px"}>
+        <Stack direction={"row"} justifyContent={"space-between"} alignItems={"center"} height={"20%"} paddingX={"15px"} >
           <Box>
-            <Typography variant="h4" fontSize={"24px"}>{relatedWork?.title}</Typography>
+            <Typography variant="h4">{relatedWork?.title}</Typography>
             <Typography
               variant="body2"
               color={"text.grey"}
@@ -43,6 +43,7 @@ export default function RelatedWorkCard({ work }) {
               color: "white",
               width: "72px",
               height: "40px",
+              fontSize:"18px",
               "&:hover": { backgroundColor: "#FFB51F" },
             }}
           >

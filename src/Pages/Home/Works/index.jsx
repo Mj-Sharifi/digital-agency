@@ -1,5 +1,5 @@
 import { Divider, Typography, Grid, Container, Button } from "@mui/material";
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import WorkCard from "./WorkCard";
 import { Link } from "react-router-dom";
 
@@ -7,7 +7,9 @@ export default function Works() {
   const [works, setWorks] = useState();
   useEffect(() => {
     (async () => {
-      const res = await fetch(`${process.env.REACT_APP_API_URL}makarya-portfolio?_start=0&_end=6`);
+      const res = await fetch(
+        `${process.env.REACT_APP_API_URL}makarya-portfolio?_start=0&_end=6`
+      );
       const data = await res.json();
       setWorks(data);
     })();
@@ -32,11 +34,37 @@ export default function Works() {
           marginBottom: "40px",
         }}
       />
-      <Grid container spacing={3} sx={{display:"flex",justifyContent:{xs:"center",sm:"start"},marginBottom:"25px"}}>
-        {works?.map((work,index)=><WorkCard key={index} work={work} index={index}/>)}
+      <Grid
+        container
+        spacing={3}
+        sx={{
+          display: "flex",
+          justifyContent: { xs: "center", sm: "start" },
+          marginBottom: "25px",
+        }}
+      >
+        {works?.map((work, index) => (
+          <WorkCard key={index} work={work} index={index} />
+        ))}
       </Grid>
 
-      <Link to="/portfolio-list"><Button variant="contained" color="primary" disableElevation sx={{display:"flex !important",color:"white",width:"161px",height:"53px",margin:"0 auto"}}>View All</Button></Link>
+      <Link to="/portfolio-list">
+        <Button
+          variant="contained"
+          color="primary"
+          disableElevation
+          sx={{
+            display: "flex !important",
+            color: "white",
+            width: "150px",
+            height: "50px",
+            margin: "0 auto",
+            fontSize:"20px"
+          }}
+        >
+          View All
+        </Button>
+      </Link>
     </Container>
   );
 }
