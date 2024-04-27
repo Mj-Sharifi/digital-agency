@@ -19,8 +19,7 @@ import Auth from "../../Utils/Auth";
 // Menu
 const navItems = ["Home", "About Us", "Portfolio", "Blog", "Pages", "Contact"];
 const pagesItems = [
-  "LOGIN",
-  "REGISTER",
+  "LOGIN/REGISTER",
   "MY PROFILE",
   "PRICING",
   "FAQ",
@@ -99,7 +98,7 @@ export default function Navbar() {
         <Box>
           <img
             className="w-12 h-12"
-            src={`${process.env.REACT_APP_API_Images}footer/footer logo.svg`}
+            src={`assets/images/footer/footer logo.svg`}
             alt="Makarya"
             title="Makarya"
           />
@@ -131,9 +130,8 @@ export default function Navbar() {
                     <Typography
                       variant="body2"
                       sx={{
-                        color:"white !important",
+                        color: "white !important",
                         transition: "all 0.3s",
-                        fontSize: "14px",
                         "&:hover": { color: "primary.main" },
                       }}
                     >
@@ -154,8 +152,11 @@ export default function Navbar() {
                       item === border ? "3px solid #FFB51F" : "none"
                     }`,
                     paddingBottom: `${item === border ? "10px" : "0px"}`,
-                    "& a":{color:"text.white"},
-                    "& a:hover span,& a:hover svg": {transition: "all 0.3s", color: "primary.main" },
+                    "& a": { color: "text.white" },
+                    "& a:hover span,& a:hover svg": {
+                      transition: "all 0.3s",
+                      color: "primary.main",
+                    },
                   }}
                 >
                   <Link
@@ -173,7 +174,6 @@ export default function Navbar() {
                         alignItems: "center",
                         transition: "all 0.3s",
                         color: "white !important",
-                        fontSize: "14px",
                       }}
                     >
                       {item.toUpperCase()}
@@ -200,7 +200,13 @@ export default function Navbar() {
           >
             {pagesItems.map((e, i) => (
               <MenuItem key={i} onClick={handleClose}>
-                <Link to={`/${e.toLowerCase().split(" ").join("-")}`}>{e}</Link>
+                <Link
+                  to={`/${
+                    i === 0 ? "register" : e.toLowerCase().split(" ").join("-")
+                  }`}
+                >
+                  {e}
+                </Link>
               </MenuItem>
             ))}
           </Menu>

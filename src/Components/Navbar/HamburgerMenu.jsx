@@ -33,7 +33,7 @@ export default function HamburgerMenu({
       <Box sx={{ textAlign: "center", color: "white !important" }}>
         <img
           className="w-12 h-12 mx-auto my-3"
-          src={`${process.env.REACT_APP_API_Images}footer/footer logo.svg`}
+          src={`assets/images/footer/footer logo.svg`}
           alt="Makarya"
           title="Makarya"
         />
@@ -65,7 +65,9 @@ export default function HamburgerMenu({
                   >
                     {pagesItems.map((item, index) => (
                       <Link
-                        to={`/${item.toLowerCase().split(" ").join("-")}`}
+                        to={`/${
+                          index === 0 ? "register" : item.toLowerCase().split(" ").join("-")
+                        }`}
                         key={index + 10}
                       >
                         <TreeItem

@@ -28,7 +28,7 @@ const handleBreadcumbs = (page, pathNames) => {
   let breadCrumb;
   if (page.length === 1) {
     breadCrumb = (
-      <Typography color={"primary"}>{capitalize(page[0])}</Typography>
+      <Typography key={"0"} color={"primary"}>{capitalize(page[0])}</Typography>
     );
   } else {
     breadCrumb = page.map((p, i) =>
@@ -37,7 +37,7 @@ const handleBreadcumbs = (page, pathNames) => {
           {capitalize(p)}
         </Link>
       ) : (
-        <Typography sx={{color:"primary.main"}}>{capitalize(p)}</Typography>
+        <Typography key={i} sx={{color:"primary.main"}}>{capitalize(p)}</Typography>
       )
     );
 

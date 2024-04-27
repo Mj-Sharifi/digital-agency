@@ -62,7 +62,7 @@ export default function Profile() {
         <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
           <Avatar
             alt={userInfo?.fullName}
-            src={`${process.env.REACT_APP_API_Images}testimony/${userInfo?.avatar}`}
+            src={`assets/images/testimony/${userInfo?.avatar}`}
           />
         </IconButton>
       </BlackTooltip>
@@ -81,10 +81,10 @@ export default function Profile() {
           <MenuItem key={index} onClick={handleCloseUserMenu}>
             {index === 0 ? (
               <Link to="/my-profile">
-                <Typography textAlign="center">{setting}</Typography>
+                <Typography textAlign="center" variant="body1" color={"text.white"}>{setting}</Typography>
               </Link>
             ) : (
-              <Typography textAlign="center" onClick={() => handleToken("")}>
+              <Typography textAlign="center" variant="body1" onClick={() => handleToken("")}>
                 {setting}
               </Typography>
             )}

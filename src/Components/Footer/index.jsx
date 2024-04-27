@@ -20,8 +20,7 @@ import instagram from "./logo/instagram.svg";
 const secondFooterEl = ["HOME", "ABOUT US", "PORTFOLIO", "BLOG"];
 const thirdFooterEl = ["PAGES", "CONTACT"];
 const pagesItems = [
-  "LOGIN",
-  "REGISTER",
+  "LOGIN/REGISTER",
   "MY PROFILE",
   "PRICING",
   "FAQ",
@@ -106,7 +105,7 @@ export default function Footer() {
                     primary={item}
                     sx={{ marginBottom: "15px" }}
                     primaryTypographyProps={{
-                      variant: "s",
+                      variant: "body2",
                       sx: { color: "white" },
                     }}
                   />
@@ -132,7 +131,7 @@ export default function Footer() {
                       <ListItemText
                         primary={item}
                         primaryTypographyProps={{
-                          variant: "s",
+                          variant: "body2",
                           sx: { color: "white", fontWeight: "500" },
                         }}
                       />
@@ -140,13 +139,15 @@ export default function Footer() {
                     {pagesItems.map((e, i) => (
                       <Link
                         key={i}
-                        to={`/${e.toLowerCase().split(" ").join("-")}`}
+                        to={`/${
+                          i === 0 ? "register" : e.toLowerCase().split(" ").join("-")
+                        }`}
                       >
                         <ListItemText
                           sx={{ marginLeft: "15px", marginBottom: "10px" }}
                           primary={`${e}`}
                           primaryTypographyProps={{
-                            variant: "xs",
+                            variant: "body1",
                             sx: { color: "white" },
                           }}
                         />
@@ -159,7 +160,7 @@ export default function Footer() {
                       primary={item}
                       sx={{ marginBottom: "15px", fontWeight: "500" }}
                       primaryTypographyProps={{
-                        variant: "s",
+                        variant: "body2",
                         sx: { color: "white" },
                       }}
                     />
@@ -172,8 +173,6 @@ export default function Footer() {
             <Typography
               variant="h4"
               sx={{
-                fontSize: "20px",
-                fontWeight: "600",
                 color: "white",
                 marginBottom: "25px",
                 textAlign: { xs: "center", sm: "inherit" },
