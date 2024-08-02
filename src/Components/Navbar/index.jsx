@@ -17,7 +17,14 @@ import Profile from "./Profile";
 import Auth from "../../Utils/Auth";
 
 // Menu
-const navItems = ["Home", "About Us", "Portfolio", "Blog", "Pages", "Contact"];
+const navItems = [
+  "Home",
+  "About Us",
+  "Portfolio",
+  "Pricing",
+  "Blog",
+  "Contact",
+];
 const pagesItems = [
   "LOGIN/REGISTER",
   "MY PROFILE",
@@ -25,16 +32,49 @@ const pagesItems = [
   "FAQ",
   "404 PAGE",
 ];
+// const navItems = ["Home", "About Us", "Portfolio", "Blog", "Pages", "Contact"];
+// const pagesItems = [
+//   "LOGIN/REGISTER",
+//   "MY PROFILE",
+//   "PRICING",
+//   "FAQ",
+//   "404 PAGE",
+// ];
+const menuItems = [
+  {
+    id: "menu-item-Home",
+    label: "Home",
+  },
+  {
+    id: "menu-item-About-Us",
+    label: "About Us",
+  },
+  {
+    id: "menu-item-Portfolio",
+    label: "Portfolio",
+    children: [
+      { id: "menu-item-Portfolio-community", label: "@mui/x-charts" },
+      { id: "menu-item-Portfolio-community", label: "@mui/x-charts" },
+    ],
+  },
+  {
+    id: "menu-item-Blog",
+    label: "Tree View",
+    children: [{ id: "tree-view-community", label: "@mui/x-tree-view" }],
+  },
+  {
+    id: "menu-item-Blog",
+    label: "Tree View",
+    children: [{ id: "tree-view-community", label: "@mui/x-tree-view" }],
+  },
+  {
+    id: "contact",
+    label: "Tree View",
+    children: [{ id: "tree-view-community", label: "@mui/x-tree-view" }],
+  },
+];
 
-const handleLink = (item, index) => {
-  if (index === 0) {
-    return "/";
-  } else if (index === 4) {
-    return undefined;
-  } else {
-    return `/${item.toLowerCase().split(" ").join("-")}`;
-  }
-};
+const handleLink = (item, index) => {};
 const capitalize = (str) => {
   let strArray = str.split(" ");
   strArray = strArray.map((s) => {
@@ -49,22 +89,17 @@ export default function Navbar() {
   const page = useLocation();
   const [border, setBorder] = useState();
   useEffect(() => {
-    const p = page?.pathname;
-    if (p === "/") {
+    const pathname = page?.pathname;
+    if (pathname === "/") {
       setBorder("Home");
-    } else if (
-      p === "/about-us" ||
-      p === "/contact" ||
-      p === "/blog" ||
-      p === "/portfolio"
-    ) {
-      setBorder(capitalize(p.split("-").join(" ").slice(1)));
-    } else if (p.includes("portfolio")) {
-      setBorder("Portfolio");
-    } else if (p.includes("blog")) {
-      setBorder("Blog");
+    } else if (pathname.includes("about-us")) {
+      setBorder("About Us");
     } else {
-      setBorder("Pages");
+      navItems.slice(2).map((e) => {
+        if (pathname.includes(e.toLowerCase())) {
+          setBorder(e);
+        }
+      });
     }
   }, [page]);
 
@@ -79,7 +114,6 @@ export default function Navbar() {
     setOpen(false);
     setAnchorEl(null);
   };
-
   // Hamburger Menu
   const [mobileOpen, setMobileOpen] = useState(false);
   const handleDrawerToggle = (event) => {
@@ -110,81 +144,38 @@ export default function Navbar() {
           height={"100%"}
           alignItems={"center"}
         >
-          {navItems.map((item, index) => {
-            if (index !== 4) {
-              return (
-                <Box
-                  key={index}
+          {border && navItems.map((item, index) => (
+            <Box
+              key={index}
+              sx={{
+                transition: "0.3s",
+                display: "flex",
+                alignItems: "center",
+                height: "100%",
+                borderBottom: `${
+                  item == border ? "3px solid #FFB51F" : "none"
+                }`,
+                paddingBottom: `${item == border ? "10px" : "0px"}`,
+              }}
+            >
+              <Link
+                to={`/${index > 0 ? item.replace(" ", "-").toLowerCase() : ""}`}
+                // onClick={() => setBorder(item)}
+              >
+                <Typography
+                  variant="body2"
                   sx={{
-                    transition: "0.3s",
-                    display: "flex",
-                    alignItems: "center",
-                    height: "100%",
-                    borderBottom: `${
-                      item === border ? "3px solid #FFB51F" : "none"
-                    }`,
-                    paddingBottom: `${item === border ? "10px" : "0px"}`,
+                    color: "white !important",
+                    transition: "all 0.3s",
+                    "&:hover": { color: "primary.main" },
                   }}
                 >
-                  <Link to={handleLink(item, index)}>
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        color: "white !important",
-                        transition: "all 0.3s",
-                        "&:hover": { color: "primary.main" },
-                      }}
-                    >
-                      {item.toUpperCase()}
-                    </Typography>
-                  </Link>
-                </Box>
-              );
-            } else {
-              return (
-                <Box
-                  key={index}
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    height: "100%",
-                    borderBottom: `${
-                      item === border ? "3px solid #FFB51F" : "none"
-                    }`,
-                    paddingBottom: `${item === border ? "10px" : "0px"}`,
-                    "& a": { color: "text.white" },
-                    "& a:hover span,& a:hover svg": {
-                      transition: "all 0.3s",
-                      color: "primary.main",
-                    },
-                  }}
-                >
-                  <Link
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                    }}
-                    to={handleLink(item, index)}
-                    onClick={(e) => handleClick(e, item)}
-                  >
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        transition: "all 0.3s",
-                        color: "white !important",
-                      }}
-                    >
-                      {item.toUpperCase()}
-                    </Typography>
-                    <KeyboardArrowDown />
-                  </Link>
-                </Box>
-              );
-            }
-          })}
-          <Menu
+                  {item.toUpperCase()}
+                </Typography>
+              </Link>
+            </Box>
+          ))}
+          {/* <Menu
             id="basic-menu"
             anchorEl={anchorEl}
             open={open === "PAGES" && true}
@@ -209,7 +200,7 @@ export default function Navbar() {
                 </Link>
               </MenuItem>
             ))}
-          </Menu>
+          </Menu> */}
           {token ? (
             <Profile />
           ) : (

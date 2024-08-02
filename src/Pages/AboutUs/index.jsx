@@ -154,9 +154,9 @@ export default function AboutUs() {
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d25714.177790868052!2d59.5767962!3d36.3299517!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1707208614906!5m2!1sen!2s"
           style={{ border: "0", width: "100%", height: "100%" }}
-          allowfullscreen=""
+          allowFullScreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerPolicy="no-referrer-when-downgrade"
           title="Our Location"
         ></iframe>
       </Box>
