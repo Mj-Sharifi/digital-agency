@@ -1,0 +1,589 @@
+{
+  "makarya-posts": [
+    {
+      "id": 1,
+      "image": "article-list-article1.jpg",
+      "title": "Article 1",
+      "category": ["Branding"],
+      "excerpt": "Maecenas faucibus neque nec purus viverra molestie. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus.",
+      "author": "Hayden Show",
+      "avatar": "article-detail-author.jpg",
+      "date": "Monday, 10 September 2018",
+      "body": [
+        "Maecenas faucibus neque nec purus viverra molestie. Sed euismod eleifend faucibus. Maecenas viverra massa quis felis finibus posuere. Cras ut luctus quam. Vestibulum eget lectus id nulla tincidunt posuere. Cras eget vehicula lorem, vel posuere mauris.",
+        "Fusce viverra lobortis nulla, id congue ligula tempus non. Etiam est urna, congue non condimentum at, cursus nec odio. Sed ac posuere mauris. Mauris ac eleifend mauris. Aenean dignissim diam tortor, in congue odio tincidunt eget. Nullam ut ex a nulla lobortis elementum at quis lacus. Nulla non lacus iaculis, semper ligula et, lobortis ex. Sed vitae viverra velit. Donec non leo nec ligula consequat lacinia. Vestibulum id quam fringilla, gravida sapien eget, eleifend lectus. Vestibulum placerat rutrum velit et pharetra. Suspendisse venenatis lobortis quam vitae tempor.",
+        "Pellentesque eu tortor vestibulum, gravida est eu, tempor elit. In non dolor sit amet metus tincidunt tempus. Aliquam blandit risus nec pharetra finibus. Etiam diam massa, dictum et dolor ac, elementum pulvinar lectus. In vitae interdum tellus. Sed odio quam, semper vel rutrum at, laoreet eget tortor. Suspendisse sagittis justo ac mi sollicitudin, egestas sagittis nisl rutrum. Morbi euismod, sem quis tempor dictum, risus purus tincidunt justo, vitae lacinia odio est at erat. Quisque sollicitudin feugiat interdum. Suspendisse sed mauris non nunc auctor commodo et convallis tortor. Fusce vitae lobortis nisl. Pellentesque luctus nisi mauris, in suscipit velit aliquet id. Vivamus at luctus ex, quis semper dolor. Sed vestibulum convallis massa sed tristique. Pellentesque auctor dui arcu, vitae consectetur massa porttitor sit amet."
+      ],
+      "relatedArtcile": [
+        {
+          "id": 2
+        },
+        {
+          "id": 5
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "article-list-article2.jpg",
+      "title": "Article 2",
+      "category": ["Branding"],
+      "excerpt": "Maecenas faucibus neque nec purus viverra molestie. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus.",
+      "author": "Remy Sharp",
+      "avatar": "article-detail-author.jpg",
+      "date": "Monday, 10 September 2018",
+      "body": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Ipsum suspendisse ultrices gravida dictum fusce ut placerat.",
+        "Gravida quis blandit turpis cursus in. At in tellus integer feugiat. Amet tellus cras adipiscing enim eu turpis egestas pretium. Facilisis sed odio morbi quis commodo odio. Pretium quam vulputate dignissim suspendisse in. Sapien nec sagittis aliquam malesuada bibendum arcu. Morbi quis commodo odio aenean. Vehicula ipsum a arcu cursus. Nec tincidunt praesent semper feugiat nibh sed. Faucibus interdum posuere lorem ipsum dolor sit amet consectetur adipiscing. Justo donec enim diam vulputate. Magna fermentum iaculis eu non diam phasellus vestibulum lorem sed. At volutpat diam ut venenatis tellus in metus. Eget magna fermentum iaculis eu non. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Praesent semper feugiat nibh sed pulvinar proin gravida. Felis eget velit aliquet sagittis id. Quisque non tellus orci ac auctor augue mauris. Quis hendrerit dolor magna eget est lorem. Venenatis urna cursus eget nunc scelerisque viverra mauris in.",
+        "Velit euismod in pellentesque massa placerat duis ultricies lacus. Et ligula ullamcorper malesuada proin libero. Suspendisse sed nisi lacus sed viverra tellus in hac habitasse. Odio eu feugiat pretium nibh ipsum consequat. Nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Lorem donec massa sapien faucibus et molestie ac. Neque ornare aenean euismod elementum nisi quis eleifend quam. Adipiscing at in tellus integer feugiat scelerisque varius morbi enim. Arcu cursus euismod quis viverra nibh cras. Libero id faucibus nisl tincidunt eget nullam non. Enim sed faucibus turpis in eu. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique."
+      ],
+      "relatedArtcile": [
+        {
+          "id": 1
+        },
+        {
+          "id": 5
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image": "article-list-article3.jpg",
+      "title": "Article 3",
+      "category": ["Branding"],
+      "excerpt": "Maecenas faucibus neque nec purus viverra molestie. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus."
+    },
+    {
+      "id": 4,
+      "image": "article-list-article4.jpg",
+      "title": "Article 4",
+      "category": ["Branding"],
+      "excerpt": "Maecenas faucibus neque nec purus viverra molestie. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus."
+    },
+    {
+      "id": 5,
+      "image": "article-list-article5.jpg",
+      "title": "Article 5",
+      "category": ["Branding"],
+      "excerpt": "Maecenas faucibus neque nec purus viverra molestie. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus.",
+      "author": "Remy Sharp",
+      "avatar": "article-detail-author.jpg",
+      "date": "Monday, 10 September 2018",
+      "body": [
+        "Tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum vitae sapien pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas sed tempus urna et pharetra pharetra massa massa ultricies mi quis hendrerit dolor magna eget est lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi",
+        "Elementum integer enim neque volutpat. Augue neque gravida in fermentum et. Mi tempus imperdiet nulla malesuada. Scelerisque eleifend donec pretium vulputate sapien. Tortor at risus viverra adipiscing at in tellus integer feugiat. Placerat in egestas erat imperdiet sed euismod nisi porta lorem. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra accumsan. Enim sit amet venenatis urna cursus eget. Sodales neque sodales ut etiam sit amet nisl purus. Sagittis eu volutpat odio facilisis mauris sit amet massa vitae. Felis donec et odio pellentesque diam volutpat. Semper quis lectus nulla at. Tellus molestie nunc non blandit massa enim nec. Nunc sed id semper risus in hendrerit gravida rutrum quisque. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Enim lobortis scelerisque fermentum dui faucibus in ornare quam. Id semper risus in hendrerit gravida rutrum. Aliquet nec ullamcorper sit amet risus nullam eget felis. Consectetur libero id faucibus nisl tincidunt.",
+        "Pellentesque eu tortor vestibulum, gravida est eu, tempor elit. In non dolor sit amet metus tincidunt tempus. Aliquam blandit risus nec pharetra finibus. Etiam diam massa, dictum et dolor ac, elementum pulvinar lectus. In vitae interdum tellus. Sed odio quam, semper vel rutrum at, laoreet eget tortor. Suspendisse sagittis justo ac mi sollicitudin, egestas sagittis nisl rutrum. Morbi euismod, sem quis tempor dictum, risus purus tincidunt justo, vitae lacinia odio est at erat. Quisque sollicitudin feugiat interdum. Suspendisse sed mauris non nunc auctor commodo et convallis tortor. Fusce vitae lobortis nisl. Pellentesque luctus nisi mauris, in suscipit velit aliquet id. Vivamus at luctus ex, quis semper dolor. Sed vestibulum convallis massa sed tristique. Pellentesque auctor dui arcu, vitae consectetur massa porttitor sit amet."
+      ],
+      "relatedArtcile": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "image": "article-list-article6.jpg",
+      "title": "Article 6",
+      "category": ["Branding"],
+      "excerpt": "Maecenas faucibus neque nec purus viverra molestie. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus."
+    },
+    {
+      "id": 7,
+      "image": "article-list-article7.jpg",
+      "title": "Article 7",
+      "category": ["Branding"],
+      "excerpt": "Maecenas faucibus neque nec purus viverra molestie. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus.",
+      "avatar": "article-detail-author.jpg",
+      "date": "Monday, 10 September 2018",
+      "body": [
+        "Tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum vitae sapien pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas sed tempus urna et pharetra pharetra massa massa ultricies mi quis hendrerit dolor magna eget est lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi",
+        "Elementum integer enim neque volutpat. Augue neque gravida in fermentum et. Mi tempus imperdiet nulla malesuada. Scelerisque eleifend donec pretium vulputate sapien. Tortor at risus viverra adipiscing at in tellus integer feugiat. Placerat in egestas erat imperdiet sed euismod nisi porta lorem. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra accumsan. Enim sit amet venenatis urna cursus eget. Sodales neque sodales ut etiam sit amet nisl purus. Sagittis eu volutpat odio facilisis mauris sit amet massa vitae. Felis donec et odio pellentesque diam volutpat. Semper quis lectus nulla at. Tellus molestie nunc non blandit massa enim nec. Nunc sed id semper risus in hendrerit gravida rutrum quisque. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Enim lobortis scelerisque fermentum dui faucibus in ornare quam. Id semper risus in hendrerit gravida rutrum. Aliquet nec ullamcorper sit amet risus nullam eget felis. Consectetur libero id faucibus nisl tincidunt.",
+        "Pellentesque eu tortor vestibulum, gravida est eu, tempor elit. In non dolor sit amet metus tincidunt tempus. Aliquam blandit risus nec pharetra finibus. Etiam diam massa, dictum et dolor ac, elementum pulvinar lectus. In vitae interdum tellus. Sed odio quam, semper vel rutrum at, laoreet eget tortor. Suspendisse sagittis justo ac mi sollicitudin, egestas sagittis nisl rutrum. Morbi euismod, sem quis tempor dictum, risus purus tincidunt justo, vitae lacinia odio est at erat. Quisque sollicitudin feugiat interdum. Suspendisse sed mauris non nunc auctor commodo et convallis tortor. Fusce vitae lobortis nisl. Pellentesque luctus nisi mauris, in suscipit velit aliquet id. Vivamus at luctus ex, quis semper dolor. Sed vestibulum convallis massa sed tristique. Pellentesque auctor dui arcu, vitae consectetur massa porttitor sit amet."
+      ]
+    },
+    {
+      "id": 8,
+      "image": "article-list-article8.jpg",
+      "title": "Article 8",
+      "category": ["Branding"],
+      "excerpt": "Maecenas faucibus neque nec purus viverra molestie. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus."
+    },
+    {
+      "id": 9,
+      "image": "article-list-article9.jpg",
+      "title": "Article 9",
+      "category": ["Branding"],
+      "excerpt": "Maecenas faucibus neque nec purus viverra molestie. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus. Sed euismod eleifend faucibus."
+    }
+  ],
+  "makarya-comments": [
+    {
+      "id": 1,
+      "body": "Maecenas faucibus neque nec purus viverra molestie. Sed euismod eleifend faucibus. Maecenas viverra massa quis felis finibus posuere. Cras ut luctus quam. Vestibulum eget lectus id nulla tincidunt posuere.",
+      "post-id": 1,
+      "like": 22,
+      "date": "09-10-2018",
+      "name": "Aaron Smith",
+      "avatar": "Aaron-Smith.jpg"
+    },
+    {
+      "id": 2,
+      "body": "The spa attendant applied the deep cleaning mask to the gentleman’s back.",
+      "post-id": 1,
+      "like": 7,
+      "date": "09-10-2018",
+      "name": "Linda Parsons",
+      "avatar": "Linda-Parsons.jpg"
+    },
+    {
+      "id": 3,
+      "body": "The white water rafting trip was suddenly halted by the unexpected brick wall.",
+      "post-id": 2,
+      "like": 19,
+      "date": "09-10-2018",
+      "name": "Aaron Smith",
+      "avatar": "Aaron-Smith.jpg"
+    },
+    {
+      "id": 4,
+      "body": "At that moment she realized she had a sixth sense.",
+      "post-id": 2,
+      "like": 8,
+      "date": "09-10-2018",
+      "name": "Alex Holyoake",
+      "avatar": "Alex-Holyoake.jpg"
+    },
+    {
+      "id": 5,
+      "body": "He was disappointed when he found the beach to be so sandy and the sun so sunny.",
+      "post-id": 5,
+      "like": 18,
+      "date": "09-10-2018",
+      "name": "Alex Holyoake",
+      "avatar": "Alex-Holyoake.jpg"
+    },
+    {
+      "id": 6,
+      "body": "Sometimes I stare at a door or a wall and I wonder what is this reality, why am I alive, and what is this all about?",
+      "post-id": 5,
+      "like": 11,
+      "date": "09-10-2018",
+      "name": "Jeslyn Chanchaleune",
+      "avatar": "Jeslyn-Chanchaleune.jpg"
+    },
+    {
+      "id": 7,
+      "body": "There were white out conditions in the town; subsequently, the roads were impassable.",
+      "post-id": 1,
+      "like": 3,
+      "date": "09-10-2018",
+      "name": "Jamie King",
+      "avatar": "Jamie-King.jpg"
+    },
+    {
+      "id": 8,
+      "body": " We need to rent a room for our party.",
+      "post-id": 2,
+      "like": 20,
+      "date": "09-10-2018",
+      "name": "Emelia Reeves",
+      "avatar": "Emelia-Reeves.jpg"
+    },
+    {
+      "id": 9,
+      "body": "She looked into the mirror and saw another person.",
+      "post-id": 1,
+      "like": 15,
+      "date": "09-10-2018",
+      "name": "Poppy Sinclair",
+      "avatar": "Poppy-Sinclair.jpg"
+    },
+    {
+      "id": 10,
+      "body": "If eating three-egg omelets causes weight-gain, budgie eggs are a good substitute.",
+      "post-id": 1,
+      "like": 3,
+      "date": "09-10-2018",
+      "name": "Fiona Lyons",
+      "avatar": "Fiona-Lyons.jpg"
+    },
+    {
+      "id": 11,
+      "body": "He shaved the peach to prove a point.",
+      "post-id": 5,
+      "like": 15,
+      "date": "09-10-2018",
+      "name": "Jamie King",
+      "avatar": "Jamie-King.jpg"
+    },
+    {
+      "id": 12,
+      "body": "It was obvious she was hot, sweaty, and tired.",
+      "post-id": 2,
+      "like": 15,
+      "date": "09-10-2018",
+      "name": "Linda Parsons",
+      "avatar": "Linda-Parsons.jpg"
+    },
+    {
+      "id": 13,
+      "body": "Flying fish few by the space station.",
+      "post-id": 5,
+      "like": 12,
+      "date": "09-10-2018",
+      "name": "Fiona Lyons",
+      "avatar": "Fiona-Lyons.jpg"
+    },
+    {
+      "id": 14,
+      "body": "He used to get confused between soldiers and shoulders, but as a military man, he now soldiers responsibility.",
+      "post-id": 1,
+      "like": 8,
+      "date": "09-10-2018",
+      "name": "Emelia Reeves",
+      "avatar": "Emelia-Reeves.jpg"
+    }
+  ],
+  "makarya-faq": [
+    {
+      "title": "First",
+      "summary": "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident."
+    },
+    {
+      "title": "Second",
+      "summary": "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident."
+    },
+    {
+      "title": "Third",
+      "summary": "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident."
+    },
+    {
+      "title": "Fourth",
+      "summary": "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident."
+    },
+    {
+      "title": "Fifth",
+      "summary": "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident."
+    }
+  ],
+  "makarya-teamMembers": [
+    {
+      "img": "Jamie-King.jpg",
+      "name": "Jamie King",
+      "skill": "Graphic Designer"
+    },
+    {
+      "img": "Linda-Parsons.jpg",
+      "name": "Linda Parsons",
+      "skill": "Graphic Designer"
+    },
+    {
+      "img": "Poppy-Sinclair.jpg",
+      "name": "Poppy Sinclair",
+      "skill": "Graphic Designer"
+    },
+    {
+      "img": "Emelia-Reeves.jpg",
+      "name": "Emelia Reeves",
+      "skill": "Graphic Designer"
+    },
+    {
+      "img": "Aaron-Smith.jpg",
+      "name": "Aaron Smith",
+      "skill": "Graphic Designer"
+    },
+    {
+      "img": "Fiona-Lyons.jpg",
+      "name": "Fiona Lyons",
+      "skill": "Graphic Designer"
+    }
+  ],
+  "makarya-portfolio": [
+    {
+      "id": 1,
+      "image": "portfolio-works-My-Vegetarian-Dinner-1.jpg",
+      "detailed-image": [
+        "portfolio-works-My-Vegetarian-Dinner-1.jpg",
+        "portfolio-works-My-Vegetarian-Dinner-2.jpg"
+      ],
+      "title": "Photography",
+      "client": "My Vegetarian Dinner",
+      "category": ["Branding", "Logo Design", "Logo", "Poster Design"],
+      "date": "12-14-2023",
+      "description": "Non odio euismod lacinia at quis risus sed. Vitae turpis massa sed elementum tempus egestas sed sed. Cursus metus aliquam eleifend mi in nulla. Massa tincidunt nunc pulvinar sapien. Etiam sit amet nisl purus in mollis. Nullam eget felis eget nunc lobortis mattis aliquam faucibus. Accumsan lacus vel facilisis volutpat est velit egestas. Nec sagittis aliquam malesuada bibendum. Id cursus metus aliquam eleifend mi in. Nunc lobortis mattis aliquam faucibus purus in massa tempor nec. Nulla malesuada pellentesque elit eget gravida cum sociis. Nunc non blandit massa enim nec dui nunc mattis enim.",
+      "related": [2, 3, 4]
+    },
+    {
+      "id": 2,
+      "image": "portfolio-works-fix-guru-1.jpg",
+      "detailed-image": [
+        "portfolio-works-fix-guru-1.jpg",
+        "portfolio-works-fix-guru-2.jpg",
+        "portfolio-works-fix-guru-3.jpg"
+      ],
+      "title": "Photography",
+      "client": "Fix Guru",
+      "category": ["Branding", "Logo Design", "Logo", "Poster Design"],
+      "date": "05-21-2023",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae turpis massa sed elementum tempus egestas sed sed. Viverra maecenas accumsan lacus vel facilisis volutpat. Tincidunt dui ut ornare lectus sit amet est placerat in. Molestie nunc non blandit massa enim nec dui nunc.",
+      "related": [1, 3, 4]
+    },
+    {
+      "id": 3,
+      "image": "portfolio-works-gourmet-sandwich-1.jpeg",
+      "detailed-image": [
+        "portfolio-works-gourmet-sandwich-1.jpeg",
+        "portfolio-works-gourmet-sandwich-2.jpg",
+        "portfolio-works-gourmet-sandwich-3.jpg"
+      ],
+      "title": "Photography",
+      "client": "Gourmet Sandwich",
+      "category": ["Branding", "Logo Design", "Logo", "Poster Design"],
+      "date": "08-19-2023",
+      "description": "Imperdiet dui accumsan sit amet nulla facilisi morbi. Aenean euismod elementum nisi quis eleifend. Montes nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Tempus urna et pharetra pharetra massa massa ultricies. Pretium fusce id velit ut. Diam vulputate ut pharetra sit amet aliquam id diam maecenas. Malesuada pellentesque elit eget gravida cum sociis natoque.",
+      "related": [1, 2, 4]
+    },
+    {
+      "id": 4,
+      "image": "portfolio-works-raven-1.jpg",
+      "detailed-image": [
+        "portfolio-works-raven-1.jpg",
+        "portfolio-works-raven-2.jpg",
+        "portfolio-works-raven-3.jpg",
+        "portfolio-works-raven-4.jpg"
+      ],
+      "title": "Branding",
+      "client": "Raven",
+      "category": ["Branding", "Logo Design", "Logo", "Poster Design"],
+      "date": "10-22-2023",
+      "description": "Blandit turpis cursus in hac habitasse platea dictumst. Ut etiam sit amet nisl. Eleifend donec pretium vulputate sapien. Cursus euismod quis viverra nibh cras pulvinar. Venenatis tellus in metus vulputate. Diam ut venenatis tellus in. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies.",
+      "related": [1, 2, 3]
+    },
+    {
+      "id": 5,
+      "image": "portfolio-works-Strawthings-Co-1.jpg",
+      "title": "Photography",
+      "client": "Strawthings Co.",
+      "category": ["Branding", "Logo Design", "Logo", "Poster Design"],
+      "date": "06-12-2023"
+    },
+    {
+      "id": 6,
+      "image": "portfolio-works-Teen-Shirt-1.jpg",
+      "title": "Branding",
+      "client": "Teen-Shirt",
+      "category": ["Branding", "Logo Design", "Logo", "Poster Design"],
+      "date": "08-18-2021"
+    },
+    {
+      "id": 7,
+      "image": "portfolio-works-Streetyoung-1.jpg",
+      "title": "Branding",
+      "client": "Streetyoung",
+      "category": ["Branding", "Logo Design", "Logo", "Poster Design"],
+      "date": "06-25-2019"
+
+    },
+    {
+      "id": 8,
+      "image": "portfolio-works-4.jpg",
+      "title": "Photography",
+      "client": "Freshfruit",
+      "category": ["Branding", "Logo Design", "Logo", "Poster Design"],
+      "date": "12-10-2018"
+
+    },
+    {
+      "id": 9,
+      "image": "portfolio-works-5.jpg",
+      "title": "Print Design",
+      "client": "INKGril Co.",
+      "category": ["Branding", "Logo Design", "Logo", "Poster Design"],
+      "date": "09-02-2021"
+    },
+    {
+      "id": 10,
+      "image": "portfolio-works-6.jpg",
+      "title": "Print Design",
+      "client": "Lifehealth Inc.",
+      "category": ["Digital Marketing", "Logo Design", "Logo", "Poster Design"],
+      "date": "09-03-2020"
+    },
+    {
+      "id": 11,
+      "image": "portfolio-works-5.jpg",
+      "title": "Photography",
+      "client": "Clean Scissor",
+      "category": ["Branding", "Logo Design", "Logo", "Poster Design"],
+      "date": "04-18-2021"
+    },
+    {
+      "id": 12,
+      "image": "portfolio-works-Brew Bean-1.jpg",
+      "title": "Photography",
+      "client": "Brew Bean",
+      "category": ["Branding", "Logo Design", "Logo", "Poster Design"],
+      "date": "08-05-2023"
+    },
+    {
+      "id": 13,
+      "image": "portfolio-works-5.jpg",
+      "title": "Digital Marketing",
+      "client": "Bloom Marketing",
+      "category": ["Digital Marketing"],
+      "date": "09-10-2020"
+    }
+  ],
+  "makarya-pricing": [
+    {
+      "plans": [
+        {
+          "name": "Personal",
+          "price": "10",
+          "icon": "personal.svg",
+          "features": [
+            "Lorem ipsum doler sit amet doler sit",
+            "Lorem ipsum doler sit amet",
+            "Lorem ipsum doler sit amet doler sit",
+            "Lorem ipsum doler"
+          ]
+        },
+        {
+          "name": "Professional",
+          "price": "45",
+          "icon": "professional.svg",
+          "features": [
+            "Lorem ipsum doler sit amet doler sit",
+            "Lorem ipsum doler sit amet",
+            "Lorem ipsum doler sit amet doler sit",
+            "Lorem ipsum doler"
+          ]
+        },
+        {
+          "name": "Business",
+          "price": "85",
+          "icon": "business.svg",
+          "features": [
+            "Lorem ipsum doler sit amet doler sit",
+            "Lorem ipsum doler sit amet",
+            "Lorem ipsum doler sit amet doler sit",
+            "Lorem ipsum doler"
+          ]
+        }
+      ],
+      "clients": [
+        {
+          "name": "Paypal",
+          "logo": "cc-paypal.svg"
+        },
+        {
+          "name": "Spotify",
+          "logo": "spotify.svg"
+        },
+        {
+          "name": "Wix",
+          "logo": "wix.svg"
+        },
+        {
+          "name": "Mailchimp",
+          "logo": "mailchimp.svg"
+        },
+        {
+          "name": "Paypal",
+          "logo": "cc-paypal.svg"
+        },
+        {
+          "name": "Spotify",
+          "logo": "spotify.svg"
+        },
+        {
+          "name": "Wix",
+          "logo": "wix.svg"
+        },
+        {
+          "name": "Mailchimp",
+          "logo": "mailchimp.svg"
+        }
+      ]
+    }
+  ],
+  "makarya-testimony": [
+    {
+      "name": "Jasmine Abbot",
+      "avatar": "Jasmine-Abbot.jpg",
+      "rating": 4,
+      "workAt": "Fast Corp.",
+      "description": "With supporting text below as a natural lead-in to additional content."
+    },
+    {
+      "name": "Jeslyn Chanchaleune",
+      "avatar": "Jeslyn-Chanchaleune.jpg",
+      "rating": 5,
+      "workAt": "SPARK",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui commodi, minus provident at optio eum, veniam velit illum nemo deserunt rem nesciunt."
+    },
+    {
+      "name": "Alex Holyoake",
+      "avatar": "Alex-Holyoake.jpg",
+      "rating": 4,
+      "workAt": "Bloom Marketing",
+      "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, veritatis alias! Officiis dolore illo quod commodi, quidem nesciunt!"
+    },
+    {
+      "name": "Fiona Lyons",
+      "avatar": "Fiona-Lyons.jpg",
+      "rating": 5,
+      "workAt": "Raven",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ab sit veniam."
+    },
+    {
+      "name": "Jamie King",
+      "avatar": "Jamie-King.jpg",
+      "rating": 5,
+      "workAt": "Fix Guru",
+      "description": "With supporting text below as a natural lead-in to additional content."
+    }
+  ],
+  "users": [
+    {
+      "email": "remy.sharp@gmail.com",
+      "password": "$2a$10$E9fhOQa8ER14u93Cmu.sj.P9sShyKdgnWPbTOELVTSzhveKBfxara",
+      "fullName": "Remy Sharp",
+      "confirmPassword": "Abcd1234*",
+      "id": 1,
+      "avatar": "Jamie-King.jpg",
+      "city": "Torento",
+      "country": "Canada",
+      "about": "Maecenas faucibus neque nec purus viverra molestie. Sed euismod eleifend faucibus. Maecenas viverra massa quis.",
+      "articles": [2, 4, 5, 8],
+      "numberOfLikes": 18000,
+      "numberOfComments": 1500,
+      "numberOfViews": 40000
+    },
+    {
+      "email": "hayden.show@gmail.com",
+      "password": "$2a$10$fJaNU0AV7zrEIpajCLRTZuFg9jcdlzUz5GZxlsrOBAgj2ICxDNGZ6",
+      "fullName": "Hayden Show",
+      "confirmPassword": "Abcd1234*",
+      "id": 2,
+      "avatar": "Jeslyn-Chanchaleune.jpg",
+      "city": "London",
+      "country": "England",
+      "about": "Maecenas faucibus neque nec purus viverra molestie. Sed euismod eleifend faucibus. Maecenas viverra massa quis.",
+      "articles": [1, 3, 6, 7, 9],
+      "numberOfLikes": 25500,
+      "numberOfComments": 2300,
+      "numberOfViews": 45000
+    },
+    {
+      "email": "mj.sharifimanesh@gmail.com",
+      "password": "$2a$10$tNMlofH5gncnJas2y2fleuUSCgxfcXcpHOu6edHsRT7KuDacO0IRC",
+      "fullName": "Mohammad Sharifi",
+      "confirmPassword": "o915704345O!",
+      "id": 3
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import { Divider, Box, Container } from "@mui/material";
+import { Divider, Container } from "@mui/material";
 import React from "react";
 import Banner from "./Banner";
 import About from "./About";

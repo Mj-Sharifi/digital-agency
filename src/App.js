@@ -1,8 +1,5 @@
 import "@fontsource/roboto";
-import "@fontsource/roboto";
-import "@fontsource/roboto";
-import "@fontsource/roboto";
-import "@fontsource/source-sans-pro";
+
 import "./App.css";
 
 import { Navigate, Route, Routes } from "react-router-dom";

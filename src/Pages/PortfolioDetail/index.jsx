@@ -52,24 +52,32 @@ export default function PortfolioDetail() {
                 marginBottom: "30px",
               }}
             />
-            <Typography variant="body2" sx={{ marginBottom: "30px" }}>
-              <span
-                style={{
-                  fontSize: "32px",
-                  fontWeight: "600",
+            <Typography
+              variant="body2"
+              sx={{
+                marginBottom: "30px",
+                "&::first-letter": {
                   textTransform: "uppercase",
-                }}
-              >
-                {work?.description[0]}
-              </span>
-              {work?.description.slice(1)}
+                  fontWeight:"700",
+                  fontSize:{xs:"18px",md:"24px",xl:"28px"}
+                },
+              }}
+            >
+              {work?.description}
+
             </Typography>
-            <Typography variant="body2" sx={{"& span":{fontWeight:"600 !important"}}}>
+            <Typography
+              variant="body2"
+              sx={{ "& span": { fontWeight: "600 !important" } }}
+            >
               <span>Client: </span> {work?.client}
             </Typography>
-            <Typography variant="body2" sx={{"& span":{fontWeight:"600 !important"}}}>
-              <span >Date: </span>
-              {work?.date&&DateFormatter(work?.date)}
+            <Typography
+              variant="body2"
+              sx={{ "& span": { fontWeight: "600 !important" } }}
+            >
+              <span>Date: </span>
+              {work?.date && DateFormatter(work?.date)}
             </Typography>
             <Stack direction={"row"}>
               <Typography
@@ -80,14 +88,18 @@ export default function PortfolioDetail() {
               </Typography>
               <Stack direction={"row"} gap={1} flexWrap={"wrap"}>
                 {work?.category.map((e, i) => (
-                  <Chip key={i} color="primary" sx={{ color: "white" }} label={e} />
+                  <Chip
+                    key={i}
+                    color="primary"
+                    sx={{ color: "white" }}
+                    label={e}
+                  />
                 ))}
               </Stack>
             </Stack>
           </Box>
           <Box sx={{ width: { xs: "100%", md: "50%" } }}>
-            {work&&<Slider slides={work["detailed-image"]} />}
-            
+            {work && <Slider slides={work["detailed-image"]} />}
           </Box>
         </Stack>
         <Divider

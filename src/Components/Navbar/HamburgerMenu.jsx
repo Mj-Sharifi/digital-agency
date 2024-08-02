@@ -38,7 +38,7 @@ export default function HamburgerMenu({
           title="Makarya"
         />
         <Divider sx={{ backgroundColor: "#FFB51F",mb:"15px" }} variant="middle" />
-        <TreeView
+        {/* <TreeView
           aria-label="file system navigator"
           defaultCollapseIcon={<ExpandMore />}
           defaultExpandIcon={<ChevronRight />}
@@ -95,7 +95,7 @@ export default function HamburgerMenu({
               }
             })}
           </Box>
-        </TreeView>
+        </TreeView> */}
       </Box>
     </Drawer>
   );

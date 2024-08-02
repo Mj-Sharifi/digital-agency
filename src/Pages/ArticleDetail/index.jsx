@@ -56,13 +56,13 @@ export default function ArticleDetail() {
               <span
                 style={{
                   marginRight: "20px",
-                  fontWeight: "600",
+                  fontWeight: "00",
                   color: "black",
                 }}
               >
                 By:
               </span>
-              Hebrew Shaw
+              {post.author}
             </Typography>
             <Typography>
               <span
@@ -107,12 +107,17 @@ export default function ArticleDetail() {
                 key={i}
                 variant="body2"
                 component="p"
-                sx={{ marginBottom: { xs: "15px", md: "20px" } }}
+                sx={{ marginBottom: { xs: "15px", md: "20px" },"&::first-letter": {
+                  textTransform: "uppercase",
+                  fontWeight:"700",
+                  fontSize:{xs:"18px",md:"24px",xl:"28px"}
+                } }}
               >
-                <span style={{ fontSize: "32px", fontWeight: "600" }}>
+                {letters}
+                {/* <span style={{ fontSize: "32px", fontWeight: "600" }}>
                   {letters[0]}
                 </span>
-                {letters.slice(1)}
+                {letters.slice(1)} */}
               </Typography>
             );
           } else {
