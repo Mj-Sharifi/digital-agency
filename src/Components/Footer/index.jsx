@@ -6,16 +6,17 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 // import logo
-import brandLogo from "./logo/footer logo.svg"
+import brandLogo from "./logo/footer logo.svg";
 import linkedin from "./logo/linkedin.svg";
 import medium from "./logo/medium.svg";
 import twitter from "./logo/twitter.svg";
 import dribbble from "./logo/dribbble.svg";
 import facebook from "./logo/facebook.svg";
 import instagram from "./logo/instagram.svg";
+import Auth from "../../Utils/Auth";
 
 const secondFooterEl = ["HOME", "ABOUT US", "PORTFOLIO", "BLOG"];
 const thirdFooterEl = ["PAGES", "CONTACT"];
@@ -29,6 +30,7 @@ const pagesItems = [
 const socialMedia = [linkedin, medium, twitter, dribbble, facebook, instagram];
 
 export default function Footer() {
+  const { token } = useContext(Auth);
   return (
     <Box
       sx={{ backgroundColor: "black", color: "white", marginTop: "20px" }}
@@ -74,7 +76,7 @@ export default function Footer() {
             <Typography
               variant="body1"
               sx={{
-                marginTop: "50px",
+                marginTop: { xs: "30px", md: "45px" },
                 color: "white",
                 fontWeight: "300",
                 lineHeight: "16px",
@@ -88,88 +90,45 @@ export default function Footer() {
           <Grid
             item
             xs={7}
-            sm={4}
-            md={2}
+            sm={5}
+            md={3}
             sx={{
               display: "flex",
+              flexDirection: "column",
+              gap: "12px",
               justifyContent: { xs: "center", sm: "start" },
+              "& span:hover": {
+                transition: "0.3s",
+                color: "primary.main",
+                cursor:"pointer"
+              },
             }}
           >
-            <List sx={{ paddingY: "0" }}>
-              {secondFooterEl.map((item, index) => (
-                <Link
-                  key={item}
-                  to={`/${item.toLowerCase().split(" ").join("-")}`}
-                >
-                  <ListItemText
-                    primary={item}
-                    sx={{ marginBottom: "15px" }}
-                    primaryTypographyProps={{
-                      variant: "body2",
-                      sx: { color: "white" },
-                    }}
-                  />
-                </Link>
-              ))}
-            </List>
+            {!token && (
+              <Typography
+                component={"span"}
+                variant="body2"
+                onClick={() => {
+                  const loginBtn = document.getElementById("login-btn")
+                  loginBtn?.click()
+                }}
+              >
+                Login
+              </Typography>
+            )}
+            <Link to={"/"}>
+              <Typography component={"span"} variant="body2">
+                Home
+              </Typography>
+            </Link>
+            <Link to={"/faq"}>
+              <Typography component={"span"} variant="body2">
+                Frequently Asked Questions
+              </Typography>
+            </Link>
           </Grid>
-          <Grid
-            item
-            xs={7}
-            sm={4}
-            md={2}
-            sx={{
-              display: "flex",
-              justifyContent: { xs: "center", sm: "start" },
-            }}
-          >
-            <List sx={{ paddingY: "0" }}>
-              {thirdFooterEl.map((item, index) =>
-                item === "PAGES" ? (
-                  <Box key={index}>
-                    <Link>
-                      <ListItemText
-                        primary={item}
-                        primaryTypographyProps={{
-                          variant: "body2",
-                          sx: { color: "white", fontWeight: "500" },
-                        }}
-                      />
-                    </Link>
-                    {pagesItems.map((e, i) => (
-                      <Link
-                        key={i}
-                        to={`/${
-                          i === 0 ? "register" : e.toLowerCase().split(" ").join("-")
-                        }`}
-                      >
-                        <ListItemText
-                          sx={{ marginLeft: "15px", marginBottom: "10px" }}
-                          primary={`${e}`}
-                          primaryTypographyProps={{
-                            variant: "body1",
-                            sx: { color: "white" },
-                          }}
-                        />
-                      </Link>
-                    ))}
-                  </Box>
-                ) : (
-                  <Link key={item} to={`/${item.toLowerCase()}`}>
-                    <ListItemText
-                      primary={item}
-                      sx={{ marginBottom: "15px", fontWeight: "500" }}
-                      primaryTypographyProps={{
-                        variant: "body2",
-                        sx: { color: "white" },
-                      }}
-                    />
-                  </Link>
-                )
-              )}
-            </List>
-          </Grid>
-          <Grid item xs={6} sm={4} md={3} sx={{ paddingX: "5%" }}>
+
+          <Grid item xs={6} sm={5} md={4} sx={{ paddingX: "5%" }}>
             <Typography
               variant="h4"
               sx={{
@@ -183,11 +142,7 @@ export default function Footer() {
             <Grid container spacing={3}>
               {socialMedia.map((icon, index) => (
                 <Grid key={index} item xs={4}>
-                  <Box
-                    component={"img"}
-                    src={icon}
-                    alt={icon}
-                  />
+                  <Box component={"img"} src={icon} alt={icon} />
                 </Grid>
               ))}
             </Grid>

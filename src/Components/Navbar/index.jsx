@@ -175,36 +175,11 @@ export default function Navbar() {
               </Link>
             </Box>
           ))}
-          {/* <Menu
-            id="basic-menu"
-            anchorEl={anchorEl}
-            open={open === "PAGES" && true}
-            onClose={handleClose}
-            MenuListProps={{
-              "aria-labelledby": "dropdown-portfolio",
-            }}
-            sx={{
-              "& .MuiPaper-root": { backgroundColor: "black", color: "white" },
-              "& a": { color: "white !important", transition: "all 0.3s" },
-              "& a:hover": { color: "primary.main" },
-            }}
-          >
-            {pagesItems.map((e, i) => (
-              <MenuItem key={i} onClick={handleClose}>
-                <Link
-                  to={`/${
-                    i === 0 ? "register" : e.toLowerCase().split(" ").join("-")
-                  }`}
-                >
-                  {e}
-                </Link>
-              </MenuItem>
-            ))}
-          </Menu> */}
+          
           {token ? (
             <Profile />
           ) : (
-            <Link to="/register">
+            <Link to="/register" id="login-btn">
               <Button
                 disableRipple
                 variant="contained"
