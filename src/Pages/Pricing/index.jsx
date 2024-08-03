@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Hero from "../../Components/Hero";
 import Testimony from "../../Components/Testimony";
-import { Container, Divider, Grid, Typography } from "@mui/material";
+import { Container, Divider, Grid, Typography, Stack } from "@mui/material";
 import PlanCard from "./PlanCard";
 import ClientsSlider from "./ClientsSlider";
+import Loader from "../../Components/Loader";
 
 export default function Pricing() {
   const [plans, setPlans] = useState();
@@ -11,7 +12,9 @@ export default function Pricing() {
   useEffect(() => {
     try {
       (async () => {
-        const res = await fetch(`${process.env.REACT_APP_API_URL}makarya-pricing`);
+        const res = await fetch(
+          `${process.env.REACT_APP_API_URL}makarya-pricing`
+        );
         const data = await res.json();
         setPlans(data[0].plans);
         setClients(data[0].clients);
@@ -53,11 +56,18 @@ export default function Pricing() {
           Cras ut luctus quam. Vestibulum eget lectus id nulla tincidunt
           posuere.
         </Typography>
-        <Grid container spacing={4} justifyContent={"center"}>
-          {plans?.map((p, i) => (
-            <PlanCard key={i} plan={p} index={i} />
-          ))}
-        </Grid>
+        {plans ? (
+          <>
+            <Grid container spacing={4} justifyContent={"center"}>
+              {plans?.map((p, i) => (
+                <PlanCard key={i} plan={p} index={i} />
+              ))}
+            </Grid>
+          </>
+        ) : (
+          <Loader />
+        )}
+
         <Divider
           sx={{
             marginX: "auto",
@@ -79,7 +89,7 @@ export default function Pricing() {
             marginBottom: "30px",
           }}
         />
-        <Testimony/>
+        <Testimony />
         <Divider
           sx={{
             marginX: "auto",
@@ -101,7 +111,7 @@ export default function Pricing() {
             marginBottom: "30px",
           }}
         />
-        <ClientsSlider clients={clients} />
+        {clients ? <ClientsSlider clients={clients} /> : <Loader />}
       </Container>
     </>
   );

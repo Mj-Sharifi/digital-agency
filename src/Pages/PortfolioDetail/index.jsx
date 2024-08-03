@@ -13,6 +13,7 @@ import {
 import RelatedWorkCard from "./WorkCard";
 import Slider from "./Slider";
 import { useParams } from "react-router-dom";
+import Loader from "../../Components/Loader";
 
 export default function PortfolioDetail() {
   const { id } = useParams();
@@ -39,99 +40,112 @@ export default function PortfolioDetail() {
         subtitle={"Nulla vitae elit libero, a pharetra augue mollis interdum."}
       />
       <Container sx={{ marginBottom: "50px" }}>
-        <Stack direction={{ xs: "column", md: "row-reverse" }} gap={4}>
-          <Box sx={{ width: { xs: "100%", md: "50%" } }}>
-            <Typography variant="h4" component={"h3"}>
-              {work?.title}
+        {work ? (
+          <>
+            <Stack direction={{ xs: "column", md: "row-reverse" }} gap={4}>
+              <Box sx={{ width: { xs: "100%", md: "50%" } }}>
+                <Typography variant="h4" component={"h3"}>
+                  {work?.title}
+                </Typography>
+                <Divider
+                  sx={{
+                    width: "40px",
+                    height: "5px",
+                    backgroundColor: "#FFB51F",
+                    marginBottom: "30px",
+                  }}
+                />
+                <Typography
+                  variant="body2"
+                  sx={{
+                    marginBottom: "30px",
+                    "&::first-letter": {
+                      textTransform: "uppercase",
+                      fontWeight: "700",
+                      fontSize: { xs: "18px", md: "24px", xl: "28px" },
+                    },
+                  }}
+                >
+                  {work?.description}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  sx={{ "& span": { fontWeight: "600 !important" } }}
+                >
+                  <span>Client: </span> {work?.client}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  sx={{ "& span": { fontWeight: "600 !important" } }}
+                >
+                  <span>Date: </span>
+                  {work?.date && DateFormatter(work?.date)}
+                </Typography>
+                <Stack direction={"row"}>
+                  <Typography
+                    variant="body2"
+                    sx={{ fontWeight: "600 !important", marginRight: "25px" }}
+                  >
+                    Category:
+                  </Typography>
+                  <Stack direction={"row"} gap={1} flexWrap={"wrap"}>
+                    {work?.category.map((e, i) => (
+                      <Chip
+                        key={i}
+                        color="primary"
+                        sx={{ color: "white" }}
+                        label={e}
+                      />
+                    ))}
+                  </Stack>
+                </Stack>
+              </Box>
+              <Box sx={{ width: { xs: "100%", md: "50%" } }}>
+                {work && <Slider slides={work["detailed-image"]} />}
+              </Box>
+            </Stack>
+            <Divider
+              sx={{
+                marginX: "auto",
+                width: { xs: "90%", sm: "80%", md: "70%", lg: "60%" },
+                height: "2px",
+                backgroundColor: "#FFB51F",
+                marginY: "30px",
+              }}
+            />
+            <Typography variant="h4" component={"h3"} textAlign={"center"}>
+              Related Works
             </Typography>
             <Divider
               sx={{
+                marginX: "auto",
                 width: "40px",
                 height: "5px",
                 backgroundColor: "#FFB51F",
                 marginBottom: "30px",
               }}
             />
-            <Typography
-              variant="body2"
-              sx={{
-                marginBottom: "30px",
-                "&::first-letter": {
-                  textTransform: "uppercase",
-                  fontWeight:"700",
-                  fontSize:{xs:"18px",md:"24px",xl:"28px"}
-                },
-              }}
+            <Grid
+              container
+              spacing={4}
+              justifyContent={{ xs: "center", sm: "start" }}
             >
-              {work?.description}
-
-            </Typography>
-            <Typography
-              variant="body2"
-              sx={{ "& span": { fontWeight: "600 !important" } }}
-            >
-              <span>Client: </span> {work?.client}
-            </Typography>
-            <Typography
-              variant="body2"
-              sx={{ "& span": { fontWeight: "600 !important" } }}
-            >
-              <span>Date: </span>
-              {work?.date && DateFormatter(work?.date)}
-            </Typography>
-            <Stack direction={"row"}>
-              <Typography
-                variant="body2"
-                sx={{ fontWeight: "600 !important", marginRight: "25px" }}
-              >
-                Category:
-              </Typography>
-              <Stack direction={"row"} gap={1} flexWrap={"wrap"}>
-                {work?.category.map((e, i) => (
-                  <Chip
-                    key={i}
-                    color="primary"
-                    sx={{ color: "white" }}
-                    label={e}
-                  />
-                ))}
-              </Stack>
-            </Stack>
-          </Box>
-          <Box sx={{ width: { xs: "100%", md: "50%" } }}>
-            {work && <Slider slides={work["detailed-image"]} />}
-          </Box>
-        </Stack>
-        <Divider
-          sx={{
-            marginX: "auto",
-            width: { xs: "90%", sm: "80%", md: "70%", lg: "60%" },
-            height: "2px",
-            backgroundColor: "#FFB51F",
-            marginY: "30px",
-          }}
-        />
-        <Typography variant="h4" component={"h3"} textAlign={"center"}>
-          Related Works
-        </Typography>
-        <Divider
-          sx={{
-            marginX: "auto",
-            width: "40px",
-            height: "5px",
-            backgroundColor: "#FFB51F",
-            marginBottom: "30px",
-          }}
-        />
-        <Grid
-          container
-          spacing={4}
-          justifyContent={{ xs: "center", sm: "start" }}
-        >
-          {work?.related.map((e, i) => (
-            <RelatedWorkCard key={i} work={e} />
-          ))}
-        </Grid>
+              {work?.related.map((e, i) => (
+                <RelatedWorkCard key={i} work={e} />
+              ))}
+            </Grid>
+          </>
+        ) : (
+          <Stack
+            alignItems={"center"}
+            justifyContent={"start"}
+            width={"100%"}
+            paddingTop={{ xs: "20px", md: "40px" }}
+            height={"80vh"}
+          >
+            <Loader />
+          </Stack>
+        )}
       </Container>
     </>
   );

@@ -44,6 +44,7 @@ export default function HamburgerMenu({
           {navItems.map((item, index) => (
             <Link
               to={`/${index > 0 ? item.replace(" ", "-").toLowerCase() : ""}`}
+              key={index}
             >
               <Typography
                 variant="body2"

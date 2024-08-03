@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import TeamMember from "./TeamMember";
 import { Send } from "@mui/icons-material";
+import Loader from "../../Components/Loader";
 
 export default function AboutUs() {
   const [teamMembers, setTeamMembers] = useState();
@@ -96,14 +97,14 @@ export default function AboutUs() {
             </Typography>
           </Box>
           <Grid container spacing={2} justifyContent={"center"}>
-            {teamMembers?.map((e, index) => (
+            {teamMembers?teamMembers?.map((e, index) => (
               <TeamMember
                 key={index}
                 img={e.img}
                 name={e.name}
                 skill={e.skill}
               />
-            ))}
+            )):<Loader/>}
           </Grid>
         </Stack>
       </Container>

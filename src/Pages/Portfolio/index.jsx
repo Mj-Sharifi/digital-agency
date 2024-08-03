@@ -12,6 +12,7 @@ import React, { useEffect, useState } from "react";
 import Contact from "./Contact";
 import WorkCard from "./WorkCard";
 import Hero from "../../Components/Hero";
+import Loader from "../../Components/Loader";
 export default function Portfolio() {
   // Handle Pagination
   const [page, setPage] = useState(1);
@@ -50,38 +51,63 @@ export default function Portfolio() {
             marginBottom: "30px",
           }}
         />
-        <Grid
-          container
-          spacing={3}
-          sx={{
-            display: "flex",
-            justifyContent: { xs: "center", sm: "start" },
-            marginBottom: "25px",
-          }}
-        >
-          {works?.map((work, index) => (
-            <WorkCard key={index} work={work} />
-          ))}
-        </Grid>
-        <Stack spacing={2} alignItems={"center"} sx={{ marginTop:"40px",marginBottom:{ xs:"40px",sm:"50px",md:"60px",lg:"80px"} }}>
-          <Pagination
-            page={page}
-            onChange={handlePage}
-            color="primary"
-            count={3}
-            renderItem={(item) => (
-              <PaginationItem
-                slots={{ previous: ArrowBack, next: ArrowForward }}
-                {...item}
+        {works ? (
+          <>
+            <Grid
+              container
+              spacing={3}
+              sx={{
+                display: "flex",
+                justifyContent: { xs: "center", sm: "start" },
+                marginBottom: "25px",
+              }}
+            >
+              {works?.map((work, index) => (
+                <WorkCard key={index} work={work} />
+              ))}
+            </Grid>
+            <Stack
+              spacing={2}
+              alignItems={"center"}
+              sx={{
+                marginTop: "40px",
+                marginBottom: {
+                  xs: "40px",
+                  sm: "50px",
+                  md: "60px",
+                  lg: "80px",
+                },
+              }}
+            >
+              <Pagination
+                page={page}
+                onChange={handlePage}
+                color="primary"
+                count={3}
+                renderItem={(item) => (
+                  <PaginationItem
+                    slots={{ previous: ArrowBack, next: ArrowForward }}
+                    {...item}
+                  />
+                )}
+                sx={{
+                  "& .css-b8h5kt-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected ":
+                    { color: "white" },
+                }}
               />
-            )}
-            sx={{
-             
-              "& .css-b8h5kt-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected ":
-                { color: "white" },
-            }}
-          />
-        </Stack>
+            </Stack>
+          </>
+        ) : (
+          <Stack
+            alignItems={"center"}
+            justifyContent={"start"}
+            width={"100%"}
+            paddingTop={{ xs: "20px", md: "40px" }}
+            height={"80vh"}
+          >
+            <Loader />
+          </Stack>
+        )}
       </Container>
       <Contact />
     </>

@@ -11,6 +11,7 @@ import styles from "./style.module.css";
 // import required modules
 import { Navigation } from "swiper/modules";
 import TestimonyCard from "./TestimonyCard";
+import Loader from "../Loader";
 export default function Testimony() {
   const [testimony, setTestimony] = useState();
   useEffect(() => {
@@ -25,7 +26,7 @@ export default function Testimony() {
     }
   }, []);
   return (
-    <Swiper
+    <>{testimony?    <Swiper
       slidesPerView={1}
       spaceBetween={10}
       className="mySwiper"
@@ -48,6 +49,8 @@ export default function Testimony() {
           <TestimonyCard testimony={slide}/>
         </SwiperSlide>
       ))}
-    </Swiper>
+    </Swiper>:<Loader/>}</>
+    
+
   );
 }
