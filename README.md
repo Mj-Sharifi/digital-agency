@@ -1,7 +1,7 @@
 <h1 align="center" id="title">Digital Agency</h1>
 
 <p id="description">This a simple template including 12 pages and designed for a digital agency.</p>
-<p id="description">Hop you like it !!</p>
+<h5 id="description">Hope you like it !!</h5>
 
 <h2>🛠️ Installation Steps:</h2>
 
