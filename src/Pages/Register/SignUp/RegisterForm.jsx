@@ -56,7 +56,7 @@ export default function RegisterForm({ handlePage }) {
       setValidation(true);
       // e.preventDefault()
       console.log("values", values);
-      fetch(`${process.env.REACT_APP_API_URL}users`, {
+      fetch(`https://all-backend.liara.run/users`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),

@@ -24,7 +24,7 @@ export default function Portfolio() {
   useEffect(() => {
     (async () => {
       const res = await fetch(
-        `${process.env.REACT_APP_API_URL}makarya-portfolio?_page=${page}&_limit=6`
+        `https://all-backend.liara.run/makarya-portfolio?_page=${page}&_limit=6`
       );
       const data = await res.json();
       setWorks(data);

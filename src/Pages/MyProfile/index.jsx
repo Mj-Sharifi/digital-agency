@@ -21,7 +21,7 @@ export default function MyProfile() {
   useEffect(() => {
     try {
       (async () => {
-        const res = await fetch(`${process.env.REACT_APP_API_URL}users`);
+        const res = await fetch(`https://all-backend.liara.run/users`);
         const data = await res.json();
         setUserInfo(data[0]);
       })();

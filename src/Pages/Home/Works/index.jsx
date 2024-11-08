@@ -8,7 +8,7 @@ export default function Works() {
   useEffect(() => {
     (async () => {
       const res = await fetch(
-        `${process.env.REACT_APP_API_URL}makarya-portfolio?_start=0&_end=6`
+        `https://all-backend.liara.run/makarya-portfolio?_start=0&_end=6`
       );
       const data = await res.json();
       setWorks(data);

@@ -13,7 +13,6 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "formik": "^2.4.5",
-    "json-server": "^0.17.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-loader-spinner": "^6.1.6",
@@ -24,7 +23,7 @@
     "yup": "^1.4.0"
   },
   "scripts": {
-    "start": "concurrently \"json-server --port 3001 -w db.json --delay 1500\" \"react-scripts start\" ",
+    "start": "concurrently \"json-server --port 3001 -w db.json --delay 1500 -m ./node_modules/json-server-auth\" \"react-scripts start\" ",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -48,6 +47,8 @@
     ]
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "json-server": "^0.17.4",
+    "json-server-auth": "^2.1.0"
   }
 }

@@ -17,7 +17,7 @@ export default function Testimony() {
   useEffect(() => {
     try {
       (async () => {
-        const res = await fetch(`${process.env.REACT_APP_API_URL}makarya-testimony`);
+        const res = await fetch(`https://all-backend.liara.run/makarya-testimony`);
         const data = await res.json();
         setTestimony(data);
       })();

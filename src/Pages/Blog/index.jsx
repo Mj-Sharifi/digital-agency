@@ -25,7 +25,7 @@ export default function Blog() {
     try {
       (async () => {
         const res = await fetch(
-          `${process.env.REACT_APP_API_URL}makarya-posts?_page=${page}&_limit=6`
+          `https://all-backend.liara.run/makarya-posts?_page=${page}&_limit=6`
         );
         const data = await res.json();
         setPosts(data);

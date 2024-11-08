@@ -7,7 +7,7 @@ export default function RelatedWorkCard({ work }) {
   useEffect(() => {
     try {
       (async () => {
-        const res = await fetch(`${process.env.REACT_APP_API_URL}makarya-portfolio/${work}`);
+        const res = await fetch(`https://all-backend.liara.run/makarya-portfolio/${work}`);
         const data = await res.json();
         setRelatedWork(data);
       })();

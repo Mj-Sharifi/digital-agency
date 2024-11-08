@@ -20,7 +20,7 @@ export default function AboutUs() {
   useEffect(() => {
     try {
       (async () => {
-        const res = await fetch(`${process.env.REACT_APP_API_URL}makarya-teamMembers`);
+        const res = await fetch(`https://all-backend.liara.run/makarya-teamMembers`);
         const data = await res.json();
         setTeamMembers(data);
       })();

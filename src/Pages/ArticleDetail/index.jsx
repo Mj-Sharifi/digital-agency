@@ -21,7 +21,7 @@ export default function ArticleDetail() {
     (async () => {
       try {
         const res = await fetch(
-          `${process.env.REACT_APP_API_URL}makarya-posts/${id}`
+          `https://all-backend.liara.run/makarya-posts/${id}`
         );
         const data = await res.json();
         setPost(data);

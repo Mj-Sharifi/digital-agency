@@ -8,7 +8,7 @@ export default function Comments({ id }) {
   useEffect(() => {
     try {
       (async () => {
-        const res = await fetch(`${process.env.REACT_APP_API_URL}makarya-comments?post-id=${id}`);
+        const res = await fetch(`https://all-backend.liara.run/makarya-comments?post-id=${id}`);
         const data = await res.json();
         setComments(data);
       })();

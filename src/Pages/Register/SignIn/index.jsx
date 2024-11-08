@@ -31,7 +31,7 @@ export default function SignIn({ handlePage }) {
     validateOnChange: false,
     onSubmit: (e) => {
       setValidation(true);
-      fetch(`${process.env.REACT_APP_API_URL}login`, {
+      fetch(`https://all-backend.liara.run/signin`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),

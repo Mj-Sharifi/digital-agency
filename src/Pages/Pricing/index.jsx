@@ -13,7 +13,7 @@ export default function Pricing() {
     try {
       (async () => {
         const res = await fetch(
-          `${process.env.REACT_APP_API_URL}makarya-pricing`
+          `https://all-backend.liara.run/makarya-pricing`
         );
         const data = await res.json();
         setPlans(data[0].plans);

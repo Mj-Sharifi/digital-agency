@@ -22,7 +22,7 @@ export default function PortfolioDetail() {
     try {
       (async () => {
         const res = await fetch(
-          `${process.env.REACT_APP_API_URL}makarya-portfolio/${id}`
+          `https://all-backend.liara.run/makarya-portfolio/${id}`
         );
         const data = await res.json();
         setWork(data);

@@ -19,7 +19,7 @@ import {
     useEffect(() => {
       try {
         (async () => {
-          const res = await fetch(`${process.env.REACT_APP_API_URL}makarya-posts/${article}`);
+          const res = await fetch(`https://all-backend.liara.run/makarya-posts/${article}`);
           const data = await res.json();
           setRelatedArticle(data);
         })();
